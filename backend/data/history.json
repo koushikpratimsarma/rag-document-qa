@@ -1,0 +1,78 @@
+{
+  "koushik": [
+    {
+      "timestamp": "2026-04-19T15:13:05.589339",
+      "query": "what about this docuement",
+      "answer": "The document provided includes information about Manali Kalita, such as her address, educational qualifications, employment status, and next renewal due date. It also mentions that employers are responsible for verifying the permanent address of Assam, educational qualifications, age proof, and caste of the applicant."
+    },
+    {
+      "timestamp": "2026-04-19T15:13:21.101933",
+      "query": "thank you",
+      "answer": "The information provided does not contain any details related to the user's question."
+    },
+    {
+      "timestamp": "2026-04-19T15:13:34.889521",
+      "query": "good nigth",
+      "answer": "The information provided does not contain any relevant details about saying \"good night.\""
+    },
+    {
+      "timestamp": "2026-04-19T15:13:42.661478",
+      "query": "hi",
+      "answer": "Hi! How can I assist you today?"
+    }
+  ],
+  "manali": [
+    {
+      "timestamp": "2026-04-24T10:47:52.974300",
+      "query": "what is the name of sagarika's father",
+      "answer": "Sagarika's father's name is Late Bishnu Kalita."
+    },
+    {
+      "timestamp": "2026-04-24T10:59:48.476146",
+      "query": "how much knowledge you have , I means how many files you have",
+      "answer": "I'm sorry, but the information about the number of files available is not provided in the uploaded documents."
+    }
+  ],
+  "sanu": [
+    {
+      "timestamp": "2026-06-26T09:00:13.988427",
+      "query": "please tell me what the document contain?",
+      "answer": "The document is a certification letter stating that Mr. Koushik Pratim Sarma was a Data Science Intern at Neural Web from February 10, 2026, to May 12, 2026. It outlines his responsibilities during the internship, which included data collection and preprocessing, exploratory data analysis, machine learning model development and evaluation, and supporting AI-driven solutions. The letter highlights his strong analytical abilities, professionalism, dedication, and ability to work both independently and in a team. It concludes with a positive endorsement of his contributions and potential as a valuable asset in future endeavors."
+    },
+    {
+      "timestamp": "2026-06-26T09:00:44.896274",
+      "query": "tell me who is koushik pratim sarm",
+      "answer": "Koushik Pratim Sarma is a former Data Science Intern at Neural Web, where he was associated from February 10, 2026, to May 12, 2026. During his internship, he worked on various projects related to Artificial Intelligence and Data Science, including data collection, preprocessing, exploratory data analysis, machine learning model development, and supporting AI-driven solutions. He demonstrated strong analytical abilities, a keen interest in emerging technologies, and a proactive approach to learning. His contributions were appreciated by the team, and he is regarded as a hardworking and committed individual."
+    },
+    {
+      "timestamp": "2026-06-26T09:01:04.469770",
+      "query": "what is neural web",
+      "answer": "The information about \"Neural Web\" is not available in the uploaded files."
+    },
+    {
+      "timestamp": "2026-06-26T09:01:38.960277",
+      "query": "in which company koushik did the internship",
+      "answer": "Koushik Pratim Sarma did his internship at Neural Web."
+    },
+    {
+      "timestamp": "2026-06-26T09:02:00.175264",
+      "query": "who is virat kohli",
+      "answer": "I'm sorry, but the information about Virat Kohli is not available in the uploaded files."
+    },
+    {
+      "timestamp": "2026-06-26T09:04:25.107934",
+      "query": "what does it contain",
+      "answer": "The provided document chunks contain information about the company's global product promotion, potential regulatory impacts on business, liquidity sources including cash and marketable securities, and details about common stock registration. However, specific content details or summaries are not fully outlined in the excerpts. If you need more specific information, please let me know!"
+    },
+    {
+      "timestamp": "2026-06-26T09:04:58.955335",
+      "query": "please tell me what is the total revenue of nvidia 2026 for q1",
+      "answer": "The total revenue of NVIDIA for the first quarter of fiscal year 2026 is $75,246 million from the Data Center segment, $37,869 million from Hyperscale, $37,377 million from AI Clouds, Industrial, & Enterprise, and $6,369 million from Edge Computing. \n\nTo find the total revenue, we sum these amounts:\n\nTotal Revenue = $75,246 + $37,869 + $37,377 + $6,369 = $156,861 million. \n\nTherefore, the total revenue for NVIDIA in Q1 2026 is $156,861 million."
+    },
+    {
+      "timestamp": "2026-06-26T09:05:33.563677",
+      "query": "what is nvda",
+      "answer": "NVIDIA Corporation, commonly referred to as NVDA, is a data center-scale AI infrastructure company headquartered in Santa Clara, California. It was incorporated in California in April 1993 and reincorporated in Delaware in April 1998. The company operates in two segments: \"Compute & Networking\" and \"Graphics.\""
+    }
+  ]
+}

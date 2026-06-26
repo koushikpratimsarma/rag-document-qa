@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+pydantic-settings
+langchain
+langchain-community
+langchain-openai
+langchain-qdrant
+langchain-text-splitters
+langgraph
+qdrant-client
+sentence-transformers
+transformers
+torch
+streamlit
+requests

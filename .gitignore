@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python package cache
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Chroma DB persistence
+backend/data/chroma_db/
+backend/data/*.sqlite
+
+# Streamlit
+.streamlit/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
