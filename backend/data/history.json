@@ -1,78 +1,1572 @@
 {
   "koushik": [
     {
-      "timestamp": "2026-04-19T15:13:05.589339",
-      "query": "what about this docuement",
-      "answer": "The document provided includes information about Manali Kalita, such as her address, educational qualifications, employment status, and next renewal due date. It also mentions that employers are responsible for verifying the permanent address of Assam, educational qualifications, age proof, and caste of the applicant."
+      "id": "4d592858-9cf2-4d49-a311-74d3077ccc8d",
+      "timestamp": "2026-06-26T20:36:42.126532",
+      "query": "what does the document contain",
+      "answer": "The document contains information regarding the financial condition, results of operations, and cash flows of the registrant, as well as details about controls and procedures, legal proceedings, risk factors, unregistered sales of equity securities, and other relevant information. It also includes exhibits and a signature section, along with a statement about the responsibility of certifying officers for establishing and maintaining disclosure controls and procedures. Additionally, it references Inline XBRL Taxonomy Extension documents.",
+      "retrieved_chunks": [
+        {
+          "id": "6de46a8e-4a1e-436c-bf36-c2c5269bd490",
+          "metadata": {
+            "chunk_id": "6de46a8e-4a1e-436c-bf36-c2c5269bd490",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469753",
+            "chunk_index": 8,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Item 4. Controls and Procedures 31\n Part II : Other Information  \nItem 1. Legal Proceedings 31\nItem 1A. Risk Factors 31\nItem 2. Unregistered Sales of Equity Securities and Use of Proceeds 38\nItem 5. Other Information 39\nItem 6. Exhibits 40\nSignature  41\nWhere You Can Find More Information"
+        },
+        {
+          "id": "95531f53-9f4d-4232-b4f8-ff01eda91ef5",
+          "metadata": {
+            "chunk_id": "95531f53-9f4d-4232-b4f8-ff01eda91ef5",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.473665",
+            "chunk_index": 365,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "covered by this report;\n \n3.  Based on my knowledge, the financial statements, and other financial information included in this report, fairly present in all material respects\nthe financial condition, results of operations and cash flows of the registrant as of, and for, the periods presented in this report;\n \n4.  The registrant's other certifying officer(s) and I are responsible for establishing and maintaining disclosure controls and procedures (as"
+        },
+        {
+          "id": "7fa1f36e-b400-4544-a8b5-786ae6066cd6",
+          "metadata": {
+            "chunk_id": "7fa1f36e-b400-4544-a8b5-786ae6066cd6",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.473749",
+            "chunk_index": 373,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "covered by this report;\n \n3.  Based on my knowledge, the financial statements, and other financial information included in this report, fairly present in all material respects\nthe financial condition, results of operations and cash flows of the registrant as of, and for, the periods presented in this report;\n \n4.  The registrant's other certifying officer(s) and I are responsible for establishing and maintaining disclosure controls and procedures (as"
+        },
+        {
+          "id": "5a8a510f-5b9e-494b-8fa5-0bbb8b04ecd3",
+          "metadata": {
+            "chunk_id": "5a8a510f-5b9e-494b-8fa5-0bbb8b04ecd3",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.473602",
+            "chunk_index": 359,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "101.CAL*Inline XBRL Taxonomy Extension Calculation Linkbase Document\n101.DEF*Inline XBRL Taxonomy Extension Definition Linkbase Document\n101.LAB*Inline XBRL Taxonomy Extension Labels Linkbase Document\n101.PRE*Inline XBRL Taxonomy Extension Presentation Linkbase Document\n104 Cover Page Interactive Data File - the cover page interactive data file does not appear inthe Interactive Data File because its XBRL tags are embedded within the Inline XBRLdocument."
+        },
+        {
+          "id": "0c3d8a01-e199-44dd-95a8-90b403acefd3",
+          "metadata": {
+            "chunk_id": "0c3d8a01-e199-44dd-95a8-90b403acefd3",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471304",
+            "chunk_index": 148,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": ". These statements are based uponinformation available to us as of the filing date of this Quarterly Report on Form 10-Q, and while we believe such information forms a reasonable basis for suchstatements, such information may be limited or incomplete, and our statements should not be read to indicate that we have conducted an exhaustive inquiry into,or review of, all potentially available relevant information"
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
     },
     {
-      "timestamp": "2026-04-19T15:13:21.101933",
-      "query": "thank you",
-      "answer": "The information provided does not contain any details related to the user's question."
+      "id": "7f230ce8-49e7-4cb6-8d86-08d32cf291ed",
+      "timestamp": "2026-06-26T20:38:18.091010",
+      "query": "what is the nvda's latest revenue?",
+      "answer": "NVIDIA's latest revenue for the three months ended April 26, 2026, is $81.6 billion.",
+      "retrieved_chunks": [
+        {
+          "id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+          "metadata": {
+            "chunk_id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471136",
+            "chunk_index": 132,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nIn the first quarter of fiscal year 2027, we changed our presentation of revenue by market platform, and the comparable period has been recast as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n (In millions)\nRevenue by Market Platform   \nData Center $ 75,246 $ 39,112 \nHyperscale 37,869 17,599 \nAI Clouds, Industrial, & Enterprise 37,377 21,513 \nEdge Computing 6,369 4,950"
+        },
+        {
+          "id": "2dbdfc1d-1446-435a-bb40-51c3a4a8d07e",
+          "metadata": {
+            "chunk_id": "2dbdfc1d-1446-435a-bb40-51c3a4a8d07e",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470518",
+            "chunk_index": 74,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nrecognized as revenue. Approximately 40% of revenue from contracts greater than one year in length will be recognized over the next twelve months.\nNote 8 - Derivative Financial Instruments\nForeign Currency Derivatives"
+        },
+        {
+          "id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+          "metadata": {
+            "chunk_id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470419",
+            "chunk_index": 67,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nProperty and Equipment:\nProperty, equipment and intangible assets acquired but not paid for the first quarter of fiscal years 2027 and 2026 were $1.1 billion and $408 million,\nrespectively.\n Apr 26, 2026 Jan 25, 2026\nAccrued and Other Current Liabilities: (In millions)\nTaxes payable $ 10,638 $ 2,669 \nCustomer program accruals 4,182 5,318"
+        },
+        {
+          "id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+          "metadata": {
+            "chunk_id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469814",
+            "chunk_index": 12,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Part I. Financial Information\nItem 1. Financial Statements (Unaudited)\nNVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Income\n(In millions, except per share data)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\nRevenue $ 81,615 $ 44,062 \nCost of revenue 20,458 17,394 \nGross profit 61,157 26,668 \nOperating expenses   \nResearch and development 6,321 3,989 \nSales, general and administrative 1,300 1,041 \nTotal operating expenses 7,621 5,030"
+        },
+        {
+          "id": "084e66ad-337f-4f87-a928-ccc0a8416be2",
+          "metadata": {
+            "chunk_id": "084e66ad-337f-4f87-a928-ccc0a8416be2",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471572",
+            "chunk_index": 171,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Data Center $ 75,246 $ 62,314 $ 39,112 21 % 92 %\nHyperscale 37,869 33,814 17,599 12 % 115 %\nAI Clouds, Industrial, & Enterprise 37,377 28,500 21,513 31 % 74 %\nEdge Computing 6,369 5,813 4,950 10 % 29 %\nTotal revenue $ 81,615 $ 68,127 $ 44,062 20 % 85 %\n(1)    In the first quarter of fiscal year 2027, we changed our presentation of revenue by market platform and the comparable periods have been recast.\nRevenue was $81.6 billion, up 85% from a year ago and up 20% sequentially."
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
     },
     {
-      "timestamp": "2026-04-19T15:13:34.889521",
-      "query": "good nigth",
-      "answer": "The information provided does not contain any relevant details about saying \"good night.\""
+      "id": "f94daab4-416e-4e28-8ffa-52a085e44ba6",
+      "timestamp": "2026-06-26T20:39:51.889448",
+      "query": "what is the nvda's latest profit?",
+      "answer": "The latest profit for NVIDIA Corporation, as reported for the three months ended April 26, 2026, is a gross profit of $61,157 million.",
+      "retrieved_chunks": [
+        {
+          "id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+          "metadata": {
+            "chunk_id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471136",
+            "chunk_index": 132,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nIn the first quarter of fiscal year 2027, we changed our presentation of revenue by market platform, and the comparable period has been recast as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n (In millions)\nRevenue by Market Platform   \nData Center $ 75,246 $ 39,112 \nHyperscale 37,869 17,599 \nAI Clouds, Industrial, & Enterprise 37,377 21,513 \nEdge Computing 6,369 4,950"
+        },
+        {
+          "id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+          "metadata": {
+            "chunk_id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470419",
+            "chunk_index": 67,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nProperty and Equipment:\nProperty, equipment and intangible assets acquired but not paid for the first quarter of fiscal years 2027 and 2026 were $1.1 billion and $408 million,\nrespectively.\n Apr 26, 2026 Jan 25, 2026\nAccrued and Other Current Liabilities: (In millions)\nTaxes payable $ 10,638 $ 2,669 \nCustomer program accruals 4,182 5,318"
+        },
+        {
+          "id": "2dbdfc1d-1446-435a-bb40-51c3a4a8d07e",
+          "metadata": {
+            "chunk_id": "2dbdfc1d-1446-435a-bb40-51c3a4a8d07e",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470518",
+            "chunk_index": 74,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nrecognized as revenue. Approximately 40% of revenue from contracts greater than one year in length will be recognized over the next twelve months.\nNote 8 - Derivative Financial Instruments\nForeign Currency Derivatives"
+        },
+        {
+          "id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+          "metadata": {
+            "chunk_id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469814",
+            "chunk_index": 12,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Part I. Financial Information\nItem 1. Financial Statements (Unaudited)\nNVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Income\n(In millions, except per share data)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\nRevenue $ 81,615 $ 44,062 \nCost of revenue 20,458 17,394 \nGross profit 61,157 26,668 \nOperating expenses   \nResearch and development 6,321 3,989 \nSales, general and administrative 1,300 1,041 \nTotal operating expenses 7,621 5,030"
+        },
+        {
+          "id": "6c18196b-0fe3-4a86-bd6e-c4e0f5c98866",
+          "metadata": {
+            "chunk_id": "6c18196b-0fe3-4a86-bd6e-c4e0f5c98866",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470600",
+            "chunk_index": 81,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and Subsidiaries\nNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nNote 9 - Debt\nExpectedRemaining Term(years) EffectiveInterest Rate Apr 26, 2026 Jan 25, 2026\n(In millions)\n3.20% Notes Due 2026 0.4 3.31% $ 1,000 $ 1,000 \n1.55% Notes Due 2028 2.1 1.64% 1,250 1,250 \n2.85% Notes Due 2030 3.9 2.93% 1,500 1,500 \n2.00% Notes Due 2031 5.1 2.09% 1,250 1,250 \n3.50% Notes Due 2040 13.9 3.54% 1,000 1,000 \n3.50% Notes Due 2050 23.9 3.54% 2,000 2,000"
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
     },
     {
-      "timestamp": "2026-04-19T15:13:42.661478",
+      "id": "0f1c4cf0-da8c-4f2b-9819-ced5e1589f31",
+      "timestamp": "2026-06-26T20:40:19.844741",
+      "query": "what is the nvda's latest profit?",
+      "answer": "NVIDIA's latest profit, for the three months ended April 26, 2026, is $61,157 million.",
+      "retrieved_chunks": [
+        {
+          "id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+          "metadata": {
+            "chunk_id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471136",
+            "chunk_index": 132,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nIn the first quarter of fiscal year 2027, we changed our presentation of revenue by market platform, and the comparable period has been recast as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n (In millions)\nRevenue by Market Platform   \nData Center $ 75,246 $ 39,112 \nHyperscale 37,869 17,599 \nAI Clouds, Industrial, & Enterprise 37,377 21,513 \nEdge Computing 6,369 4,950"
+        },
+        {
+          "id": "2dbdfc1d-1446-435a-bb40-51c3a4a8d07e",
+          "metadata": {
+            "chunk_id": "2dbdfc1d-1446-435a-bb40-51c3a4a8d07e",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470518",
+            "chunk_index": 74,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nrecognized as revenue. Approximately 40% of revenue from contracts greater than one year in length will be recognized over the next twelve months.\nNote 8 - Derivative Financial Instruments\nForeign Currency Derivatives"
+        },
+        {
+          "id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+          "metadata": {
+            "chunk_id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470419",
+            "chunk_index": 67,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nProperty and Equipment:\nProperty, equipment and intangible assets acquired but not paid for the first quarter of fiscal years 2027 and 2026 were $1.1 billion and $408 million,\nrespectively.\n Apr 26, 2026 Jan 25, 2026\nAccrued and Other Current Liabilities: (In millions)\nTaxes payable $ 10,638 $ 2,669 \nCustomer program accruals 4,182 5,318"
+        },
+        {
+          "id": "9527e390-e5ae-4494-9f26-35894b34ce52",
+          "metadata": {
+            "chunk_id": "9527e390-e5ae-4494-9f26-35894b34ce52",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470387",
+            "chunk_index": 64,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "investments, including invested and future committed amounts, was $2.3 billion as of April 26, 2026.\nInvestment Commitments\nTotal Investment commitments were $27 billion as of April 26, 2026, subject to certain contingencies, which we expect will be made through the remainder of\nfiscal year 2027.\nNote 7 - Balance Sheet Components\nWe refer to customers who purchase products directly from NVIDIA as direct customers, such as add-in board manufacturers, or AIBs, distributors, original"
+        },
+        {
+          "id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+          "metadata": {
+            "chunk_id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469814",
+            "chunk_index": 12,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Part I. Financial Information\nItem 1. Financial Statements (Unaudited)\nNVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Income\n(In millions, except per share data)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\nRevenue $ 81,615 $ 44,062 \nCost of revenue 20,458 17,394 \nGross profit 61,157 26,668 \nOperating expenses   \nResearch and development 6,321 3,989 \nSales, general and administrative 1,300 1,041 \nTotal operating expenses 7,621 5,030"
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
+    },
+    {
+      "id": "286f7298-9c5a-4431-b145-51d4db436487",
+      "timestamp": "2026-06-26T20:41:18.607628",
+      "query": "what is the nvda's latest profit?",
+      "answer": "The latest profit for NVIDIA Corporation, as reported for the three months ended April 26, 2026, is a gross profit of $61,157 million.",
+      "retrieved_chunks": [
+        {
+          "id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+          "metadata": {
+            "chunk_id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471136",
+            "chunk_index": 132,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nIn the first quarter of fiscal year 2027, we changed our presentation of revenue by market platform, and the comparable period has been recast as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n (In millions)\nRevenue by Market Platform   \nData Center $ 75,246 $ 39,112 \nHyperscale 37,869 17,599 \nAI Clouds, Industrial, & Enterprise 37,377 21,513 \nEdge Computing 6,369 4,950"
+        },
+        {
+          "id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+          "metadata": {
+            "chunk_id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470419",
+            "chunk_index": 67,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nProperty and Equipment:\nProperty, equipment and intangible assets acquired but not paid for the first quarter of fiscal years 2027 and 2026 were $1.1 billion and $408 million,\nrespectively.\n Apr 26, 2026 Jan 25, 2026\nAccrued and Other Current Liabilities: (In millions)\nTaxes payable $ 10,638 $ 2,669 \nCustomer program accruals 4,182 5,318"
+        },
+        {
+          "id": "2dbdfc1d-1446-435a-bb40-51c3a4a8d07e",
+          "metadata": {
+            "chunk_id": "2dbdfc1d-1446-435a-bb40-51c3a4a8d07e",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470518",
+            "chunk_index": 74,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nrecognized as revenue. Approximately 40% of revenue from contracts greater than one year in length will be recognized over the next twelve months.\nNote 8 - Derivative Financial Instruments\nForeign Currency Derivatives"
+        },
+        {
+          "id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+          "metadata": {
+            "chunk_id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469814",
+            "chunk_index": 12,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Part I. Financial Information\nItem 1. Financial Statements (Unaudited)\nNVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Income\n(In millions, except per share data)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\nRevenue $ 81,615 $ 44,062 \nCost of revenue 20,458 17,394 \nGross profit 61,157 26,668 \nOperating expenses   \nResearch and development 6,321 3,989 \nSales, general and administrative 1,300 1,041 \nTotal operating expenses 7,621 5,030"
+        },
+        {
+          "id": "6c18196b-0fe3-4a86-bd6e-c4e0f5c98866",
+          "metadata": {
+            "chunk_id": "6c18196b-0fe3-4a86-bd6e-c4e0f5c98866",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470600",
+            "chunk_index": 81,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and Subsidiaries\nNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nNote 9 - Debt\nExpectedRemaining Term(years) EffectiveInterest Rate Apr 26, 2026 Jan 25, 2026\n(In millions)\n3.20% Notes Due 2026 0.4 3.31% $ 1,000 $ 1,000 \n1.55% Notes Due 2028 2.1 1.64% 1,250 1,250 \n2.85% Notes Due 2030 3.9 2.93% 1,500 1,500 \n2.00% Notes Due 2031 5.1 2.09% 1,250 1,250 \n3.50% Notes Due 2040 13.9 3.54% 1,000 1,000 \n3.50% Notes Due 2050 23.9 3.54% 2,000 2,000"
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
+    },
+    {
+      "id": "90e55bf1-a856-492b-b6b5-03e521d6d7bb",
+      "timestamp": "2026-06-26T20:45:15.622192",
+      "query": "what is the nvda's latest profit?",
+      "answer": "NVIDIA's latest profit, for the three months ended April 26, 2026, is $58,321 million.",
+      "retrieved_chunks": [
+        {
+          "id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+          "metadata": {
+            "chunk_id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469814",
+            "chunk_index": 12,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Part I. Financial Information\nItem 1. Financial Statements (Unaudited)\nNVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Income\n(In millions, except per share data)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\nRevenue $ 81,615 $ 44,062 \nCost of revenue 20,458 17,394 \nGross profit 61,157 26,668 \nOperating expenses   \nResearch and development 6,321 3,989 \nSales, general and administrative 1,300 1,041 \nTotal operating expenses 7,621 5,030"
+        },
+        {
+          "id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+          "metadata": {
+            "chunk_id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471136",
+            "chunk_index": 132,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nIn the first quarter of fiscal year 2027, we changed our presentation of revenue by market platform, and the comparable period has been recast as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n (In millions)\nRevenue by Market Platform   \nData Center $ 75,246 $ 39,112 \nHyperscale 37,869 17,599 \nAI Clouds, Industrial, & Enterprise 37,377 21,513 \nEdge Computing 6,369 4,950"
+        },
+        {
+          "id": "10bbbb77-e807-44be-a0ac-d650db602222",
+          "metadata": {
+            "chunk_id": "10bbbb77-e807-44be-a0ac-d650db602222",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470121",
+            "chunk_index": 40,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and Subsidiaries\nNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nCondensed Consolidated Statements of Income include stock-based compensation expense as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n(In millions)\nCost of revenue $ 68 $ 64 \nResearch and development 1,459 1,063 \nSales, general and administrative 401 347 \nTotal $ 1,928 $ 1,474 \nEquity Award Activity"
+        },
+        {
+          "id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+          "metadata": {
+            "chunk_id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470419",
+            "chunk_index": 67,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nProperty and Equipment:\nProperty, equipment and intangible assets acquired but not paid for the first quarter of fiscal years 2027 and 2026 were $1.1 billion and $408 million,\nrespectively.\n Apr 26, 2026 Jan 25, 2026\nAccrued and Other Current Liabilities: (In millions)\nTaxes payable $ 10,638 $ 2,669 \nCustomer program accruals 4,182 5,318"
+        },
+        {
+          "id": "30bca09a-bd87-47e1-a2f5-ae52b7c2c98a",
+          "metadata": {
+            "chunk_id": "30bca09a-bd87-47e1-a2f5-ae52b7c2c98a",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469853",
+            "chunk_index": 15,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Comprehensive Income\n(In millions)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n \nNet income $ 58,321 $ 18,775 \nOther comprehensive income (loss), net of tax\nAvailable-for-sale securities:\nNet change in unrealized gain (loss) (78) 139 \nCash flow hedges:\nNet change in unrealized gain 37 19 \nOther comprehensive income (loss), net of tax (41) 158 \nTotal comprehensive income $ 58,280 $ 18,933"
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
+    },
+    {
+      "id": "16307ebb-77e9-4c7f-a684-5e350a5ccb7b",
+      "timestamp": "2026-06-26T20:45:18.870365",
+      "query": "what is the nvda's latest profit?",
+      "answer": "NVIDIA's latest profit, as of the three months ended April 26, 2026, is a net income of $58,321 million.",
+      "retrieved_chunks": [
+        {
+          "id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+          "metadata": {
+            "chunk_id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469814",
+            "chunk_index": 12,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Part I. Financial Information\nItem 1. Financial Statements (Unaudited)\nNVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Income\n(In millions, except per share data)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\nRevenue $ 81,615 $ 44,062 \nCost of revenue 20,458 17,394 \nGross profit 61,157 26,668 \nOperating expenses   \nResearch and development 6,321 3,989 \nSales, general and administrative 1,300 1,041 \nTotal operating expenses 7,621 5,030"
+        },
+        {
+          "id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+          "metadata": {
+            "chunk_id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471136",
+            "chunk_index": 132,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nIn the first quarter of fiscal year 2027, we changed our presentation of revenue by market platform, and the comparable period has been recast as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n (In millions)\nRevenue by Market Platform   \nData Center $ 75,246 $ 39,112 \nHyperscale 37,869 17,599 \nAI Clouds, Industrial, & Enterprise 37,377 21,513 \nEdge Computing 6,369 4,950"
+        },
+        {
+          "id": "10bbbb77-e807-44be-a0ac-d650db602222",
+          "metadata": {
+            "chunk_id": "10bbbb77-e807-44be-a0ac-d650db602222",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470121",
+            "chunk_index": 40,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and Subsidiaries\nNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nCondensed Consolidated Statements of Income include stock-based compensation expense as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n(In millions)\nCost of revenue $ 68 $ 64 \nResearch and development 1,459 1,063 \nSales, general and administrative 401 347 \nTotal $ 1,928 $ 1,474 \nEquity Award Activity"
+        },
+        {
+          "id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+          "metadata": {
+            "chunk_id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470419",
+            "chunk_index": 67,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nProperty and Equipment:\nProperty, equipment and intangible assets acquired but not paid for the first quarter of fiscal years 2027 and 2026 were $1.1 billion and $408 million,\nrespectively.\n Apr 26, 2026 Jan 25, 2026\nAccrued and Other Current Liabilities: (In millions)\nTaxes payable $ 10,638 $ 2,669 \nCustomer program accruals 4,182 5,318"
+        },
+        {
+          "id": "30bca09a-bd87-47e1-a2f5-ae52b7c2c98a",
+          "metadata": {
+            "chunk_id": "30bca09a-bd87-47e1-a2f5-ae52b7c2c98a",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469853",
+            "chunk_index": 15,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Comprehensive Income\n(In millions)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n \nNet income $ 58,321 $ 18,775 \nOther comprehensive income (loss), net of tax\nAvailable-for-sale securities:\nNet change in unrealized gain (loss) (78) 139 \nCash flow hedges:\nNet change in unrealized gain 37 19 \nOther comprehensive income (loss), net of tax (41) 158 \nTotal comprehensive income $ 58,280 $ 18,933"
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
+    },
+    {
+      "id": "7efa4ad4-663e-4259-bc30-1ea50c02e5fd",
+      "timestamp": "2026-06-26T20:45:55.642187",
+      "query": "what is the nvda's latest profit?",
+      "answer": "NVIDIA's latest profit, for the three months ended April 26, 2026, is $58,321 million.",
+      "retrieved_chunks": [
+        {
+          "id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+          "metadata": {
+            "chunk_id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469814",
+            "chunk_index": 12,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Part I. Financial Information\nItem 1. Financial Statements (Unaudited)\nNVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Income\n(In millions, except per share data)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\nRevenue $ 81,615 $ 44,062 \nCost of revenue 20,458 17,394 \nGross profit 61,157 26,668 \nOperating expenses   \nResearch and development 6,321 3,989 \nSales, general and administrative 1,300 1,041 \nTotal operating expenses 7,621 5,030"
+        },
+        {
+          "id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+          "metadata": {
+            "chunk_id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471136",
+            "chunk_index": 132,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nIn the first quarter of fiscal year 2027, we changed our presentation of revenue by market platform, and the comparable period has been recast as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n (In millions)\nRevenue by Market Platform   \nData Center $ 75,246 $ 39,112 \nHyperscale 37,869 17,599 \nAI Clouds, Industrial, & Enterprise 37,377 21,513 \nEdge Computing 6,369 4,950"
+        },
+        {
+          "id": "10bbbb77-e807-44be-a0ac-d650db602222",
+          "metadata": {
+            "chunk_id": "10bbbb77-e807-44be-a0ac-d650db602222",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470121",
+            "chunk_index": 40,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and Subsidiaries\nNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nCondensed Consolidated Statements of Income include stock-based compensation expense as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n(In millions)\nCost of revenue $ 68 $ 64 \nResearch and development 1,459 1,063 \nSales, general and administrative 401 347 \nTotal $ 1,928 $ 1,474 \nEquity Award Activity"
+        },
+        {
+          "id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+          "metadata": {
+            "chunk_id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470419",
+            "chunk_index": 67,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nProperty and Equipment:\nProperty, equipment and intangible assets acquired but not paid for the first quarter of fiscal years 2027 and 2026 were $1.1 billion and $408 million,\nrespectively.\n Apr 26, 2026 Jan 25, 2026\nAccrued and Other Current Liabilities: (In millions)\nTaxes payable $ 10,638 $ 2,669 \nCustomer program accruals 4,182 5,318"
+        },
+        {
+          "id": "30bca09a-bd87-47e1-a2f5-ae52b7c2c98a",
+          "metadata": {
+            "chunk_id": "30bca09a-bd87-47e1-a2f5-ae52b7c2c98a",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469853",
+            "chunk_index": 15,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Comprehensive Income\n(In millions)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n \nNet income $ 58,321 $ 18,775 \nOther comprehensive income (loss), net of tax\nAvailable-for-sale securities:\nNet change in unrealized gain (loss) (78) 139 \nCash flow hedges:\nNet change in unrealized gain 37 19 \nOther comprehensive income (loss), net of tax (41) 158 \nTotal comprehensive income $ 58,280 $ 18,933"
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
+    },
+    {
+      "id": "1d6dbbcb-de35-4488-bd80-da19ac9f3a9d",
+      "timestamp": "2026-06-26T20:46:22.198983",
+      "query": "what is the nvda's latest profit?",
+      "answer": "NVIDIA's latest profit, for the three months ended April 26, 2026, is $58,321 million.",
+      "retrieved_chunks": [
+        {
+          "id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+          "metadata": {
+            "chunk_id": "bd39580f-d73f-41a0-923b-ba7699edc063",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469814",
+            "chunk_index": 12,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Part I. Financial Information\nItem 1. Financial Statements (Unaudited)\nNVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Income\n(In millions, except per share data)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\nRevenue $ 81,615 $ 44,062 \nCost of revenue 20,458 17,394 \nGross profit 61,157 26,668 \nOperating expenses   \nResearch and development 6,321 3,989 \nSales, general and administrative 1,300 1,041 \nTotal operating expenses 7,621 5,030"
+        },
+        {
+          "id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+          "metadata": {
+            "chunk_id": "fb62781c-bd58-4816-9a61-893dc7be57b7",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471136",
+            "chunk_index": 132,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nIn the first quarter of fiscal year 2027, we changed our presentation of revenue by market platform, and the comparable period has been recast as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n (In millions)\nRevenue by Market Platform   \nData Center $ 75,246 $ 39,112 \nHyperscale 37,869 17,599 \nAI Clouds, Industrial, & Enterprise 37,377 21,513 \nEdge Computing 6,369 4,950"
+        },
+        {
+          "id": "10bbbb77-e807-44be-a0ac-d650db602222",
+          "metadata": {
+            "chunk_id": "10bbbb77-e807-44be-a0ac-d650db602222",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470121",
+            "chunk_index": 40,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and Subsidiaries\nNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nCondensed Consolidated Statements of Income include stock-based compensation expense as follows:\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n(In millions)\nCost of revenue $ 68 $ 64 \nResearch and development 1,459 1,063 \nSales, general and administrative 401 347 \nTotal $ 1,928 $ 1,474 \nEquity Award Activity"
+        },
+        {
+          "id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+          "metadata": {
+            "chunk_id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470419",
+            "chunk_index": 67,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nProperty and Equipment:\nProperty, equipment and intangible assets acquired but not paid for the first quarter of fiscal years 2027 and 2026 were $1.1 billion and $408 million,\nrespectively.\n Apr 26, 2026 Jan 25, 2026\nAccrued and Other Current Liabilities: (In millions)\nTaxes payable $ 10,638 $ 2,669 \nCustomer program accruals 4,182 5,318"
+        },
+        {
+          "id": "30bca09a-bd87-47e1-a2f5-ae52b7c2c98a",
+          "metadata": {
+            "chunk_id": "30bca09a-bd87-47e1-a2f5-ae52b7c2c98a",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469853",
+            "chunk_index": 15,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesCondensed Consolidated Statements of Comprehensive Income\n(In millions)(Unaudited)\n Three Months Ended\n Apr 26, 2026 Apr 27, 2025\n \nNet income $ 58,321 $ 18,775 \nOther comprehensive income (loss), net of tax\nAvailable-for-sale securities:\nNet change in unrealized gain (loss) (78) 139 \nCash flow hedges:\nNet change in unrealized gain 37 19 \nOther comprehensive income (loss), net of tax (41) 158 \nTotal comprehensive income $ 58,280 $ 18,933"
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
+    },
+    {
+      "id": "8284ceb7-4ddf-4543-a9b0-d45aa8be4034",
+      "timestamp": "2026-06-26T20:47:15.953477",
+      "query": "what is nvda\n",
+      "answer": "NVIDIA Corporation, commonly referred to as NVDA, is a data center-scale AI infrastructure company headquartered in Santa Clara, California. It was incorporated in California in April 1993 and later reincorporated in Delaware in April 1998. The company operates in two segments: \"Compute & Networking\" and \"Graphics.\"",
+      "retrieved_chunks": [
+        {
+          "id": "f732de82-b28d-4a63-bced-26f54c0f5a59",
+          "metadata": {
+            "chunk_id": "f732de82-b28d-4a63-bced-26f54c0f5a59",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471357",
+            "chunk_index": 153,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "digital twin applications. NVIDIA is now a data center-scale AI infrastructure company reshaping all industries.\nOur two operating segments are \u201cCompute & Networking\u201d and \u201cGraphics.\u201d Refer to Note 13 of the Notes to Condensed Consolidated Financial Statements in\nPart I, Item 1 of this Quarterly Report on Form 10-Q for additional information.\nHeadquartered in Santa Clara, California, NVIDIA was incorporated in California in April 1993 and reincorporated in Delaware in April 1998."
+        },
+        {
+          "id": "87c4de8f-9836-45b6-a5a4-9e913e32e300",
+          "metadata": {
+            "chunk_id": "87c4de8f-9836-45b6-a5a4-9e913e32e300",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.473633",
+            "chunk_index": 362,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Investor Relations: NVIDIA Corporation, 2788 San Tomas Expressway, Santa Clara, CA 95051.\n40"
+        },
+        {
+          "id": "a63fd027-8ccf-401c-9b3a-b99050dca511",
+          "metadata": {
+            "chunk_id": "a63fd027-8ccf-401c-9b3a-b99050dca511",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470177",
+            "chunk_index": 45,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)(Unaudited)\nNote 4 - Amortizable Intangible Assets and Goodwill\nThe components of our amortizable intangible assets are as follows:\n Apr 26, 2026 Jan 25, 2026\n \nGrossCarryingAmount AccumulatedAmortization Net CarryingAmount\nGrossCarryingAmount AccumulatedAmortization Net CarryingAmount\n (In millions)\nAcquisition-related intangible assets$ 5,658 $ (2,759)$ 2,899 $ 5,656 $ (2,580)$ 3,076"
+        },
+        {
+          "id": "fdfa48db-dbef-4d1d-9027-9aad25140551",
+          "metadata": {
+            "chunk_id": "fdfa48db-dbef-4d1d-9027-9aad25140551",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.473897",
+            "chunk_index": 387,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "retained by NVIDIA Corporation and furnished to the Securities and Exchange Commission or its staff upon request.\n  \nThis certification accompanies the Form 10-Q to which it relates, is not deemed filed with the Securities and Exchange Commission and is not to\nbe incorporated by reference into any filing of the Company under the Securities Act of 1933, as amended, or the Exchange Act (whether made"
+        },
+        {
+          "id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+          "metadata": {
+            "chunk_id": "6374232f-69e1-48df-8cdb-2511c79f6348",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.470419",
+            "chunk_index": 67,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA Corporation and SubsidiariesNotes to Condensed Consolidated Financial Statements (Continued)\n(Unaudited)\nProperty and Equipment:\nProperty, equipment and intangible assets acquired but not paid for the first quarter of fiscal years 2027 and 2026 were $1.1 billion and $408 million,\nrespectively.\n Apr 26, 2026 Jan 25, 2026\nAccrued and Other Current Liabilities: (In millions)\nTaxes payable $ 10,638 $ 2,669 \nCustomer program accruals 4,182 5,318"
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
+    },
+    {
+      "id": "39992c10-58fa-40c7-bddf-9b09268e4d97",
+      "timestamp": "2026-06-26T20:47:47.713494",
+      "query": "who is virat kohli\n",
+      "answer": "I'm sorry, but the information about Virat Kohli is not available in the uploaded files.",
+      "retrieved_chunks": [
+        {
+          "id": "35ab3fb0-3cfb-4297-a280-a6dda0965c6d",
+          "metadata": {
+            "chunk_id": "35ab3fb0-3cfb-4297-a280-a6dda0965c6d",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469798",
+            "chunk_index": 11,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA YouTube (YouTube.com/nvidia)\nThe information we post through these social media channels may be deemed material. Accordingly, investors should monitor these channels, in addition tofollowing our press releases, SEC filings and public conference calls and webcasts. This list may be updated from time to time. The information we post throughthese channels is not a part of this Quarterly Report on Form 10-Q.\n2"
+        },
+        {
+          "id": "f194b91c-1301-4c6b-8bdf-9cc6c1abceba",
+          "metadata": {
+            "chunk_id": "f194b91c-1301-4c6b-8bdf-9cc6c1abceba",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.473644",
+            "chunk_index": 363,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Signature\nPursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersignedthereunto duly authorized.\nDate: May 20, 2026\n NVIDIA Corporation \nBy:   /s/ Colette M. Kress\n Colette M. Kress\n Executive Vice President and Chief Financial Officer (Duly Authorized Officer and PrincipalFinancial Officer)\n41"
+        },
+        {
+          "id": "cd3345a9-f3f4-411b-b97a-02991d80a160",
+          "metadata": {
+            "chunk_id": "cd3345a9-f3f4-411b-b97a-02991d80a160",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.473887",
+            "chunk_index": 386,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "the period covered by the Periodic Report and results of operations of the Company for the period covered by the Periodic Report.\nDate: May 20, 2026\n \n/s/ COLETTE M. KRESS\nColette M. Kress\nExecutive Vice President and Chief Financial Officer\n            \n   \n \nA signed original of this written statement required by Section 906 of 18 U.S.C. \u00a7 1350 has been provided to NVIDIA Corporation and will be"
+        },
+        {
+          "id": "12f7d2c2-d40a-4d3d-afc5-7017c42a6b58",
+          "metadata": {
+            "chunk_id": "12f7d2c2-d40a-4d3d-afc5-7017c42a6b58",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.473813",
+            "chunk_index": 379,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "(b) any fraud, whether or not material, that involves management or other employees who have a significant role in the registrant's internal\ncontrol over financial reporting.\n \nDate: May 20, 2026\n/s/ COLETTE M. KRESS\nColette M. Kress\nExecutive Vice President and Chief Financial Officer"
+        },
+        {
+          "id": "12616dee-a50d-4430-9ce6-239f08fadcaf",
+          "metadata": {
+            "chunk_id": "12616dee-a50d-4430-9ce6-239f08fadcaf",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471326",
+            "chunk_index": 150,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "\u00a9 2026 NVIDIA Corporation. All rights reserved.\nThe following discussion and analysis of our financial condition and results of operations should be read in conjunction with the risk factors set forth in Item 1A."
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
+    },
+    {
+      "id": "7799ebe3-8318-495e-b7c2-e11d4431b41e",
+      "timestamp": "2026-06-26T20:48:39.509354",
+      "query": "who is virat kohli\n",
+      "answer": "I'm sorry, but the information about Virat Kohli is not available in the uploaded files.",
+      "retrieved_chunks": [
+        {
+          "id": "35ab3fb0-3cfb-4297-a280-a6dda0965c6d",
+          "metadata": {
+            "chunk_id": "35ab3fb0-3cfb-4297-a280-a6dda0965c6d",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.469798",
+            "chunk_index": 11,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "NVIDIA YouTube (YouTube.com/nvidia)\nThe information we post through these social media channels may be deemed material. Accordingly, investors should monitor these channels, in addition tofollowing our press releases, SEC filings and public conference calls and webcasts. This list may be updated from time to time. The information we post throughthese channels is not a part of this Quarterly Report on Form 10-Q.\n2"
+        },
+        {
+          "id": "f194b91c-1301-4c6b-8bdf-9cc6c1abceba",
+          "metadata": {
+            "chunk_id": "f194b91c-1301-4c6b-8bdf-9cc6c1abceba",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.473644",
+            "chunk_index": 363,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "Signature\nPursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersignedthereunto duly authorized.\nDate: May 20, 2026\n NVIDIA Corporation \nBy:   /s/ Colette M. Kress\n Colette M. Kress\n Executive Vice President and Chief Financial Officer (Duly Authorized Officer and PrincipalFinancial Officer)\n41"
+        },
+        {
+          "id": "cd3345a9-f3f4-411b-b97a-02991d80a160",
+          "metadata": {
+            "chunk_id": "cd3345a9-f3f4-411b-b97a-02991d80a160",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.473887",
+            "chunk_index": 386,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "the period covered by the Periodic Report and results of operations of the Company for the period covered by the Periodic Report.\nDate: May 20, 2026\n \n/s/ COLETTE M. KRESS\nColette M. Kress\nExecutive Vice President and Chief Financial Officer\n            \n   \n \nA signed original of this written statement required by Section 906 of 18 U.S.C. \u00a7 1350 has been provided to NVIDIA Corporation and will be"
+        },
+        {
+          "id": "12f7d2c2-d40a-4d3d-afc5-7017c42a6b58",
+          "metadata": {
+            "chunk_id": "12f7d2c2-d40a-4d3d-afc5-7017c42a6b58",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.473813",
+            "chunk_index": 379,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "(b) any fraud, whether or not material, that involves management or other employees who have a significant role in the registrant's internal\ncontrol over financial reporting.\n \nDate: May 20, 2026\n/s/ COLETTE M. KRESS\nColette M. Kress\nExecutive Vice President and Chief Financial Officer"
+        },
+        {
+          "id": "12616dee-a50d-4430-9ce6-239f08fadcaf",
+          "metadata": {
+            "chunk_id": "12616dee-a50d-4430-9ce6-239f08fadcaf",
+            "document_id": "ec96f74a-f6eb-4adc-96cc-5cb285dfa033",
+            "document_name": "nvda_2026_q1_10q.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T20:35:36.471326",
+            "chunk_index": 150,
+            "chunk_count": 389,
+            "user_id": "koushik"
+          },
+          "text": "\u00a9 2026 NVIDIA Corporation. All rights reserved.\nThe following discussion and analysis of our financial condition and results of operations should be read in conjunction with the risk factors set forth in Item 1A."
+        }
+      ],
+      "documents_used": [
+        "ec96f74a-f6eb-4adc-96cc-5cb285dfa033"
+      ],
+      "session_id": "9b908f20-beb7-4666-b308-8a670b1ba878"
+    },
+    {
+      "id": "9401fe5c-9c7b-4ad6-ac85-d6ef6dbb87d1",
+      "timestamp": "2026-06-26T21:23:45.265873",
       "query": "hi",
-      "answer": "Hi! How can I assist you today?"
-    }
-  ],
-  "manali": [
-    {
-      "timestamp": "2026-04-24T10:47:52.974300",
-      "query": "what is the name of sagarika's father",
-      "answer": "Sagarika's father's name is Late Bishnu Kalita."
+      "answer": "I apologize, but I could not find relevant information in the documents to answer your question.",
+      "retrieved_chunks": [],
+      "documents_used": [],
+      "session_id": "83fce7fb-158e-4bb4-b65d-c7a04c3d9d75"
     },
     {
-      "timestamp": "2026-04-24T10:59:48.476146",
-      "query": "how much knowledge you have , I means how many files you have",
-      "answer": "I'm sorry, but the information about the number of files available is not provided in the uploaded documents."
+      "id": "835074c8-9466-4333-8d97-df9c586f579f",
+      "timestamp": "2026-06-26T21:23:59.326168",
+      "query": "i'm koushik sarma ",
+      "answer": "I apologize, but I could not find relevant information in the documents to answer your question.",
+      "retrieved_chunks": [],
+      "documents_used": [],
+      "session_id": "83fce7fb-158e-4bb4-b65d-c7a04c3d9d75"
+    },
+    {
+      "id": "a7e6096e-90c3-4a27-86d8-72e59371730c",
+      "timestamp": "2026-06-26T21:24:15.051252",
+      "query": "who is koushik sarma",
+      "answer": "I apologize, but I could not find relevant information in the documents to answer your question.",
+      "retrieved_chunks": [],
+      "documents_used": [],
+      "session_id": "83fce7fb-158e-4bb4-b65d-c7a04c3d9d75"
+    },
+    {
+      "id": "781b2965-0937-4f13-8f26-f2b2fb6c36d6",
+      "timestamp": "2026-06-28T06:27:53.973071",
+      "query": "what information the document contains?",
+      "answer": "The document contains a certification for Mr. Koushik Pratim Sarma, stating that he was associated with Neural Web as a Data Science Intern from February 10, 2026, to May 12, 2026. It outlines his responsibilities during the internship, which included data collection and preprocessing, exploratory data analysis, machine learning model development, model evaluation, and supporting AI-driven solutions for business and technical requirements. The document also highlights his strong analytical abilities, interest in emerging technologies, professionalism, dedication, and ability to work both independently and in a team environment. Additionally, it mentions that his contributions were appreciated by the team and expresses confidence in his future endeavors.",
+      "retrieved_chunks": [
+        {
+          "id": "a32e6e20-9dea-432e-87ae-58ed834dcd02",
+          "metadata": {
+            "chunk_id": "a32e6e20-9dea-432e-87ae-58ed834dcd02",
+            "document_id": "82281a0b-7557-4539-b4fa-afc842e83f85",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T06:26:49.037033",
+            "chunk_index": 1,
+            "chunk_count": 4,
+            "user_id": "koushik"
+          },
+          "text": "and\n \npreprocessing,\n \nexploratory\n \ndata\n \nanalysis,\n \nmachine\n \nlearning\n \nmodel\n \ndevelopment,\n \nmodel\n \nevaluation,\n \nand\n \nsupporting\n \nAI-driven\n \nsolutions\n \nfor\n \nbusiness\n \nand\n \ntechnical\n \nrequirements.\n \nHe\n \nalso\n \nassisted\n \nin\n \nanalyzing\n \ndatasets,\n \ngenerating\n \nactionable\n \ninsights,\n \nand\n \ncontributing\n \nto\n \nthe\n \ndevelopment\n \nand\n \noptimization\n \nof\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows."
+        },
+        {
+          "id": "d7543ab3-aa65-497d-a052-8b88d84c8732",
+          "metadata": {
+            "chunk_id": "d7543ab3-aa65-497d-a052-8b88d84c8732",
+            "document_id": "82281a0b-7557-4539-b4fa-afc842e83f85",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T06:26:49.037049",
+            "chunk_index": 2,
+            "chunk_count": 4,
+            "user_id": "koushik"
+          },
+          "text": "of\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows.\n \nThroughout  his  tenure,  Mr.  Sarma  demonstrated  strong  analytical  abilities,  a  keen  interest  in  \nemerging\n \ntechnologies,\n \nand\n \na\n \nproactive\n \napproach\n \nto\n \nlearning.\n \nHe\n \nconsistently\n \ndisplayed\n \nprofessionalism,\n \ndedication,\n \nand\n \nthe\n \nability\n \nto\n \nwork\n \neffectively\n \nboth\n \nindependently\n \nand\n \nwithin\n \na\n \nteam\n \nenvironment."
+        },
+        {
+          "id": "16268c6e-fb96-423a-bccb-9197cfa96162",
+          "metadata": {
+            "chunk_id": "16268c6e-fb96-423a-bccb-9197cfa96162",
+            "document_id": "82281a0b-7557-4539-b4fa-afc842e83f85",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T06:26:49.037061",
+            "chunk_index": 3,
+            "chunk_count": 4,
+            "user_id": "koushik"
+          },
+          "text": "and\n \nwithin\n \na\n \nteam\n \nenvironment.\n \nWe  found  him  to  be  sincere,  hardworking,  and  committed  to  delivering  quality  work.  His  \ncontributions\n \nwere\n \nappreciated\n \nby\n \nthe\n \nteam,\n \nand\n \nwe\n \nare\n \nconfident\n \nthat\n \nhe\n \nwill\n \nbe\n \na\n \nvaluable\n \nasset\n \nin\n \nhis\n \nfuture\n \nendeavors.\n \n \nKopal  Mehta  HR  lead,  Neural  Web.  \n info@neuralweb.tech         212  Stockton  Dr  Southlake,  TX,  76092   +1  469  961  6487                    Neuralweb.tech"
+        },
+        {
+          "id": "4b622c5a-1d59-4de5-8981-5e559b5779ec",
+          "metadata": {
+            "chunk_id": "4b622c5a-1d59-4de5-8981-5e559b5779ec",
+            "document_id": "82281a0b-7557-4539-b4fa-afc842e83f85",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T06:26:49.037002",
+            "chunk_index": 0,
+            "chunk_count": 4,
+            "user_id": "koushik"
+          },
+          "text": "TO  WHOM  IT  MAY  CONCERN  \nDate:  12  May  2026  \nThis  is  to  certify  that  Mr.  Koushik  Pratim  Sarma  was  associated  with  our  organization  as  a  \nData\n \nScience\n \nIntern\n \nfrom\n \n10\n \nFebruary\n \n2026\n \nto\n \n12\n \nMay\n \n2026\n.\n \nDuring  his  internship,  he  was  involved  in  various  projects  and  assignments  related  to  Artificial  \nIntelligence\n \nand\n \nData\n \nScience.\n \nHis\n \nresponsibilities\n \nincluded\n \ndata\n \ncollection\n \nand\n \npreprocessing,\n \nexploratory\n \ndata"
+        }
+      ],
+      "documents_used": [
+        "82281a0b-7557-4539-b4fa-afc842e83f85"
+      ],
+      "session_id": "74bc3f4d-4354-432d-8e0d-d6e6f79ac67f"
     }
   ],
   "sanu": [
     {
-      "timestamp": "2026-06-26T09:00:13.988427",
-      "query": "please tell me what the document contain?",
-      "answer": "The document is a certification letter stating that Mr. Koushik Pratim Sarma was a Data Science Intern at Neural Web from February 10, 2026, to May 12, 2026. It outlines his responsibilities during the internship, which included data collection and preprocessing, exploratory data analysis, machine learning model development and evaluation, and supporting AI-driven solutions. The letter highlights his strong analytical abilities, professionalism, dedication, and ability to work both independently and in a team. It concludes with a positive endorsement of his contributions and potential as a valuable asset in future endeavors."
+      "id": "a83a1f16-029c-45ab-8ded-b7c4411de5e6",
+      "timestamp": "2026-06-26T21:25:02.507728",
+      "query": "how are you",
+      "answer": "I apologize, but I could not find relevant information in the documents to answer your question.",
+      "retrieved_chunks": [],
+      "documents_used": [],
+      "session_id": "f5c88234-d986-4701-87a9-a2ca1f851c52"
     },
     {
-      "timestamp": "2026-06-26T09:00:44.896274",
-      "query": "tell me who is koushik pratim sarm",
-      "answer": "Koushik Pratim Sarma is a former Data Science Intern at Neural Web, where he was associated from February 10, 2026, to May 12, 2026. During his internship, he worked on various projects related to Artificial Intelligence and Data Science, including data collection, preprocessing, exploratory data analysis, machine learning model development, and supporting AI-driven solutions. He demonstrated strong analytical abilities, a keen interest in emerging technologies, and a proactive approach to learning. His contributions were appreciated by the team, and he is regarded as a hardworking and committed individual."
+      "id": "96660284-0c51-4a3a-940e-29dba76f45dc",
+      "timestamp": "2026-06-26T21:26:27.319451",
+      "query": "who is koushik sarma",
+      "answer": "Koushik Pratim Sarma is an individual who was associated with the organization Neural Web as a Data Science Intern from 10 February 2026 to 12 May 2026. During his internship, he worked on various projects related to Artificial Intelligence and Data Science, demonstrating strong analytical abilities and a proactive approach to learning. His responsibilities included data collection, preprocessing, exploratory data analysis, machine learning model development, and supporting AI-driven solutions. He was recognized for his sincerity, hard work, and commitment to delivering quality work.",
+      "retrieved_chunks": [
+        {
+          "id": "e6a988a1-0bb9-4d76-a309-36590b2fb1f0",
+          "metadata": {
+            "chunk_id": "e6a988a1-0bb9-4d76-a309-36590b2fb1f0",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092825",
+            "chunk_index": 0,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "TO  WHOM  IT  MAY  CONCERN  \nDate:  12  May  2026  \nThis  is  to  certify  that  Mr.  Koushik  Pratim  Sarma  was  associated  with  our  organization  as  a  \nData\n \nScience\n \nIntern\n \nfrom\n \n10\n \nFebruary\n \n2026\n \nto\n \n12\n \nMay\n \n2026\n.\n \nDuring  his  internship,  he  was  involved  in  various  projects  and  assignments  related  to  Artificial  \nIntelligence\n \nand\n \nData\n \nScience.\n \nHis\n \nresponsibilities\n \nincluded\n \ndata\n \ncollection\n \nand\n \npreprocessing,\n \nexploratory\n \ndata"
+        },
+        {
+          "id": "e05f68bf-ddbd-4c82-856f-5618a8ae6e91",
+          "metadata": {
+            "chunk_id": "e05f68bf-ddbd-4c82-856f-5618a8ae6e91",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092858",
+            "chunk_index": 2,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "of\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows.\n \nThroughout  his  tenure,  Mr.  Sarma  demonstrated  strong  analytical  abilities,  a  keen  interest  in  \nemerging\n \ntechnologies,\n \nand\n \na\n \nproactive\n \napproach\n \nto\n \nlearning.\n \nHe\n \nconsistently\n \ndisplayed\n \nprofessionalism,\n \ndedication,\n \nand\n \nthe\n \nability\n \nto\n \nwork\n \neffectively\n \nboth\n \nindependently\n \nand\n \nwithin\n \na\n \nteam\n \nenvironment."
+        },
+        {
+          "id": "941459fd-43a4-49a9-b417-735a034b7213",
+          "metadata": {
+            "chunk_id": "941459fd-43a4-49a9-b417-735a034b7213",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092849",
+            "chunk_index": 1,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "and\n \npreprocessing,\n \nexploratory\n \ndata\n \nanalysis,\n \nmachine\n \nlearning\n \nmodel\n \ndevelopment,\n \nmodel\n \nevaluation,\n \nand\n \nsupporting\n \nAI-driven\n \nsolutions\n \nfor\n \nbusiness\n \nand\n \ntechnical\n \nrequirements.\n \nHe\n \nalso\n \nassisted\n \nin\n \nanalyzing\n \ndatasets,\n \ngenerating\n \nactionable\n \ninsights,\n \nand\n \ncontributing\n \nto\n \nthe\n \ndevelopment\n \nand\n \noptimization\n \nof\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows."
+        },
+        {
+          "id": "11f200b3-dd81-4f79-bbd4-49a215d92d41",
+          "metadata": {
+            "chunk_id": "11f200b3-dd81-4f79-bbd4-49a215d92d41",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092866",
+            "chunk_index": 3,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "and\n \nwithin\n \na\n \nteam\n \nenvironment.\n \nWe  found  him  to  be  sincere,  hardworking,  and  committed  to  delivering  quality  work.  His  \ncontributions\n \nwere\n \nappreciated\n \nby\n \nthe\n \nteam,\n \nand\n \nwe\n \nare\n \nconfident\n \nthat\n \nhe\n \nwill\n \nbe\n \na\n \nvaluable\n \nasset\n \nin\n \nhis\n \nfuture\n \nendeavors.\n \n \nKopal  Mehta  HR  lead,  Neural  Web.  \n info@neuralweb.tech         212  Stockton  Dr  Southlake,  TX,  76092   +1  469  961  6487                    Neuralweb.tech"
+        }
+      ],
+      "documents_used": [
+        "8c6cf096-caa2-4773-a390-de2f1016b749"
+      ],
+      "session_id": "f5c88234-d986-4701-87a9-a2ca1f851c52"
     },
     {
-      "timestamp": "2026-06-26T09:01:04.469770",
-      "query": "what is neural web",
-      "answer": "The information about \"Neural Web\" is not available in the uploaded files."
+      "id": "01836ed2-80d7-42e4-b251-d6c17562062d",
+      "timestamp": "2026-06-26T21:26:59.644785",
+      "query": "what project did he work on",
+      "answer": "The specific projects that Mr. Koushik Pratim Sarma worked on during his internship are not detailed in the provided documents. Therefore, the information is not available in the uploaded files.",
+      "retrieved_chunks": [
+        {
+          "id": "941459fd-43a4-49a9-b417-735a034b7213",
+          "metadata": {
+            "chunk_id": "941459fd-43a4-49a9-b417-735a034b7213",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092849",
+            "chunk_index": 1,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "and\n \npreprocessing,\n \nexploratory\n \ndata\n \nanalysis,\n \nmachine\n \nlearning\n \nmodel\n \ndevelopment,\n \nmodel\n \nevaluation,\n \nand\n \nsupporting\n \nAI-driven\n \nsolutions\n \nfor\n \nbusiness\n \nand\n \ntechnical\n \nrequirements.\n \nHe\n \nalso\n \nassisted\n \nin\n \nanalyzing\n \ndatasets,\n \ngenerating\n \nactionable\n \ninsights,\n \nand\n \ncontributing\n \nto\n \nthe\n \ndevelopment\n \nand\n \noptimization\n \nof\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows."
+        },
+        {
+          "id": "e6a988a1-0bb9-4d76-a309-36590b2fb1f0",
+          "metadata": {
+            "chunk_id": "e6a988a1-0bb9-4d76-a309-36590b2fb1f0",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092825",
+            "chunk_index": 0,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "TO  WHOM  IT  MAY  CONCERN  \nDate:  12  May  2026  \nThis  is  to  certify  that  Mr.  Koushik  Pratim  Sarma  was  associated  with  our  organization  as  a  \nData\n \nScience\n \nIntern\n \nfrom\n \n10\n \nFebruary\n \n2026\n \nto\n \n12\n \nMay\n \n2026\n.\n \nDuring  his  internship,  he  was  involved  in  various  projects  and  assignments  related  to  Artificial  \nIntelligence\n \nand\n \nData\n \nScience.\n \nHis\n \nresponsibilities\n \nincluded\n \ndata\n \ncollection\n \nand\n \npreprocessing,\n \nexploratory\n \ndata"
+        },
+        {
+          "id": "e05f68bf-ddbd-4c82-856f-5618a8ae6e91",
+          "metadata": {
+            "chunk_id": "e05f68bf-ddbd-4c82-856f-5618a8ae6e91",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092858",
+            "chunk_index": 2,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "of\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows.\n \nThroughout  his  tenure,  Mr.  Sarma  demonstrated  strong  analytical  abilities,  a  keen  interest  in  \nemerging\n \ntechnologies,\n \nand\n \na\n \nproactive\n \napproach\n \nto\n \nlearning.\n \nHe\n \nconsistently\n \ndisplayed\n \nprofessionalism,\n \ndedication,\n \nand\n \nthe\n \nability\n \nto\n \nwork\n \neffectively\n \nboth\n \nindependently\n \nand\n \nwithin\n \na\n \nteam\n \nenvironment."
+        },
+        {
+          "id": "11f200b3-dd81-4f79-bbd4-49a215d92d41",
+          "metadata": {
+            "chunk_id": "11f200b3-dd81-4f79-bbd4-49a215d92d41",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092866",
+            "chunk_index": 3,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "and\n \nwithin\n \na\n \nteam\n \nenvironment.\n \nWe  found  him  to  be  sincere,  hardworking,  and  committed  to  delivering  quality  work.  His  \ncontributions\n \nwere\n \nappreciated\n \nby\n \nthe\n \nteam,\n \nand\n \nwe\n \nare\n \nconfident\n \nthat\n \nhe\n \nwill\n \nbe\n \na\n \nvaluable\n \nasset\n \nin\n \nhis\n \nfuture\n \nendeavors.\n \n \nKopal  Mehta  HR  lead,  Neural  Web.  \n info@neuralweb.tech         212  Stockton  Dr  Southlake,  TX,  76092   +1  469  961  6487                    Neuralweb.tech"
+        }
+      ],
+      "documents_used": [
+        "8c6cf096-caa2-4773-a390-de2f1016b749"
+      ],
+      "session_id": "f5c88234-d986-4701-87a9-a2ca1f851c52"
     },
     {
-      "timestamp": "2026-06-26T09:01:38.960277",
-      "query": "in which company koushik did the internship",
-      "answer": "Koushik Pratim Sarma did his internship at Neural Web."
+      "id": "c2a06df1-b1f6-41b4-b84e-599d962ff7a8",
+      "timestamp": "2026-06-26T21:27:27.446855",
+      "query": "what is neura; web",
+      "answer": "The information about \"Neural Web\" is not available in the uploaded files.",
+      "retrieved_chunks": [
+        {
+          "id": "11f200b3-dd81-4f79-bbd4-49a215d92d41",
+          "metadata": {
+            "chunk_id": "11f200b3-dd81-4f79-bbd4-49a215d92d41",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092866",
+            "chunk_index": 3,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "and\n \nwithin\n \na\n \nteam\n \nenvironment.\n \nWe  found  him  to  be  sincere,  hardworking,  and  committed  to  delivering  quality  work.  His  \ncontributions\n \nwere\n \nappreciated\n \nby\n \nthe\n \nteam,\n \nand\n \nwe\n \nare\n \nconfident\n \nthat\n \nhe\n \nwill\n \nbe\n \na\n \nvaluable\n \nasset\n \nin\n \nhis\n \nfuture\n \nendeavors.\n \n \nKopal  Mehta  HR  lead,  Neural  Web.  \n info@neuralweb.tech         212  Stockton  Dr  Southlake,  TX,  76092   +1  469  961  6487                    Neuralweb.tech"
+        },
+        {
+          "id": "941459fd-43a4-49a9-b417-735a034b7213",
+          "metadata": {
+            "chunk_id": "941459fd-43a4-49a9-b417-735a034b7213",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092849",
+            "chunk_index": 1,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "and\n \npreprocessing,\n \nexploratory\n \ndata\n \nanalysis,\n \nmachine\n \nlearning\n \nmodel\n \ndevelopment,\n \nmodel\n \nevaluation,\n \nand\n \nsupporting\n \nAI-driven\n \nsolutions\n \nfor\n \nbusiness\n \nand\n \ntechnical\n \nrequirements.\n \nHe\n \nalso\n \nassisted\n \nin\n \nanalyzing\n \ndatasets,\n \ngenerating\n \nactionable\n \ninsights,\n \nand\n \ncontributing\n \nto\n \nthe\n \ndevelopment\n \nand\n \noptimization\n \nof\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows."
+        },
+        {
+          "id": "e05f68bf-ddbd-4c82-856f-5618a8ae6e91",
+          "metadata": {
+            "chunk_id": "e05f68bf-ddbd-4c82-856f-5618a8ae6e91",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092858",
+            "chunk_index": 2,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "of\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows.\n \nThroughout  his  tenure,  Mr.  Sarma  demonstrated  strong  analytical  abilities,  a  keen  interest  in  \nemerging\n \ntechnologies,\n \nand\n \na\n \nproactive\n \napproach\n \nto\n \nlearning.\n \nHe\n \nconsistently\n \ndisplayed\n \nprofessionalism,\n \ndedication,\n \nand\n \nthe\n \nability\n \nto\n \nwork\n \neffectively\n \nboth\n \nindependently\n \nand\n \nwithin\n \na\n \nteam\n \nenvironment."
+        },
+        {
+          "id": "e6a988a1-0bb9-4d76-a309-36590b2fb1f0",
+          "metadata": {
+            "chunk_id": "e6a988a1-0bb9-4d76-a309-36590b2fb1f0",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092825",
+            "chunk_index": 0,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "TO  WHOM  IT  MAY  CONCERN  \nDate:  12  May  2026  \nThis  is  to  certify  that  Mr.  Koushik  Pratim  Sarma  was  associated  with  our  organization  as  a  \nData\n \nScience\n \nIntern\n \nfrom\n \n10\n \nFebruary\n \n2026\n \nto\n \n12\n \nMay\n \n2026\n.\n \nDuring  his  internship,  he  was  involved  in  various  projects  and  assignments  related  to  Artificial  \nIntelligence\n \nand\n \nData\n \nScience.\n \nHis\n \nresponsibilities\n \nincluded\n \ndata\n \ncollection\n \nand\n \npreprocessing,\n \nexploratory\n \ndata"
+        }
+      ],
+      "documents_used": [
+        "8c6cf096-caa2-4773-a390-de2f1016b749"
+      ],
+      "session_id": "f5c88234-d986-4701-87a9-a2ca1f851c52"
     },
     {
-      "timestamp": "2026-06-26T09:02:00.175264",
-      "query": "who is virat kohli",
-      "answer": "I'm sorry, but the information about Virat Kohli is not available in the uploaded files."
+      "id": "25bf0f9d-3a2c-4772-b5a4-07042cea57f7",
+      "timestamp": "2026-06-26T21:27:57.537034",
+      "query": "who is hr of this company",
+      "answer": "The HR lead of Neural Web is Kopal Mehta.",
+      "retrieved_chunks": [
+        {
+          "id": "11f200b3-dd81-4f79-bbd4-49a215d92d41",
+          "metadata": {
+            "chunk_id": "11f200b3-dd81-4f79-bbd4-49a215d92d41",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092866",
+            "chunk_index": 3,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "and\n \nwithin\n \na\n \nteam\n \nenvironment.\n \nWe  found  him  to  be  sincere,  hardworking,  and  committed  to  delivering  quality  work.  His  \ncontributions\n \nwere\n \nappreciated\n \nby\n \nthe\n \nteam,\n \nand\n \nwe\n \nare\n \nconfident\n \nthat\n \nhe\n \nwill\n \nbe\n \na\n \nvaluable\n \nasset\n \nin\n \nhis\n \nfuture\n \nendeavors.\n \n \nKopal  Mehta  HR  lead,  Neural  Web.  \n info@neuralweb.tech         212  Stockton  Dr  Southlake,  TX,  76092   +1  469  961  6487                    Neuralweb.tech"
+        },
+        {
+          "id": "e6a988a1-0bb9-4d76-a309-36590b2fb1f0",
+          "metadata": {
+            "chunk_id": "e6a988a1-0bb9-4d76-a309-36590b2fb1f0",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092825",
+            "chunk_index": 0,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "TO  WHOM  IT  MAY  CONCERN  \nDate:  12  May  2026  \nThis  is  to  certify  that  Mr.  Koushik  Pratim  Sarma  was  associated  with  our  organization  as  a  \nData\n \nScience\n \nIntern\n \nfrom\n \n10\n \nFebruary\n \n2026\n \nto\n \n12\n \nMay\n \n2026\n.\n \nDuring  his  internship,  he  was  involved  in  various  projects  and  assignments  related  to  Artificial  \nIntelligence\n \nand\n \nData\n \nScience.\n \nHis\n \nresponsibilities\n \nincluded\n \ndata\n \ncollection\n \nand\n \npreprocessing,\n \nexploratory\n \ndata"
+        },
+        {
+          "id": "e05f68bf-ddbd-4c82-856f-5618a8ae6e91",
+          "metadata": {
+            "chunk_id": "e05f68bf-ddbd-4c82-856f-5618a8ae6e91",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092858",
+            "chunk_index": 2,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "of\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows.\n \nThroughout  his  tenure,  Mr.  Sarma  demonstrated  strong  analytical  abilities,  a  keen  interest  in  \nemerging\n \ntechnologies,\n \nand\n \na\n \nproactive\n \napproach\n \nto\n \nlearning.\n \nHe\n \nconsistently\n \ndisplayed\n \nprofessionalism,\n \ndedication,\n \nand\n \nthe\n \nability\n \nto\n \nwork\n \neffectively\n \nboth\n \nindependently\n \nand\n \nwithin\n \na\n \nteam\n \nenvironment."
+        },
+        {
+          "id": "941459fd-43a4-49a9-b417-735a034b7213",
+          "metadata": {
+            "chunk_id": "941459fd-43a4-49a9-b417-735a034b7213",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092849",
+            "chunk_index": 1,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "and\n \npreprocessing,\n \nexploratory\n \ndata\n \nanalysis,\n \nmachine\n \nlearning\n \nmodel\n \ndevelopment,\n \nmodel\n \nevaluation,\n \nand\n \nsupporting\n \nAI-driven\n \nsolutions\n \nfor\n \nbusiness\n \nand\n \ntechnical\n \nrequirements.\n \nHe\n \nalso\n \nassisted\n \nin\n \nanalyzing\n \ndatasets,\n \ngenerating\n \nactionable\n \ninsights,\n \nand\n \ncontributing\n \nto\n \nthe\n \ndevelopment\n \nand\n \noptimization\n \nof\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows."
+        }
+      ],
+      "documents_used": [
+        "8c6cf096-caa2-4773-a390-de2f1016b749"
+      ],
+      "session_id": "f5c88234-d986-4701-87a9-a2ca1f851c52"
     },
     {
-      "timestamp": "2026-06-26T09:04:25.107934",
-      "query": "what does it contain",
-      "answer": "The provided document chunks contain information about the company's global product promotion, potential regulatory impacts on business, liquidity sources including cash and marketable securities, and details about common stock registration. However, specific content details or summaries are not fully outlined in the excerpts. If you need more specific information, please let me know!"
+      "id": "b04f89b4-2828-415d-a9f0-6f2f02695602",
+      "timestamp": "2026-06-26T21:28:14.166422",
+      "query": "who is hr of this company, can you give number",
+      "answer": "The HR lead of the company is Kopal Mehta. The contact number provided is +1 469 961 6487.",
+      "retrieved_chunks": [
+        {
+          "id": "11f200b3-dd81-4f79-bbd4-49a215d92d41",
+          "metadata": {
+            "chunk_id": "11f200b3-dd81-4f79-bbd4-49a215d92d41",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092866",
+            "chunk_index": 3,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "and\n \nwithin\n \na\n \nteam\n \nenvironment.\n \nWe  found  him  to  be  sincere,  hardworking,  and  committed  to  delivering  quality  work.  His  \ncontributions\n \nwere\n \nappreciated\n \nby\n \nthe\n \nteam,\n \nand\n \nwe\n \nare\n \nconfident\n \nthat\n \nhe\n \nwill\n \nbe\n \na\n \nvaluable\n \nasset\n \nin\n \nhis\n \nfuture\n \nendeavors.\n \n \nKopal  Mehta  HR  lead,  Neural  Web.  \n info@neuralweb.tech         212  Stockton  Dr  Southlake,  TX,  76092   +1  469  961  6487                    Neuralweb.tech"
+        },
+        {
+          "id": "e6a988a1-0bb9-4d76-a309-36590b2fb1f0",
+          "metadata": {
+            "chunk_id": "e6a988a1-0bb9-4d76-a309-36590b2fb1f0",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092825",
+            "chunk_index": 0,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "TO  WHOM  IT  MAY  CONCERN  \nDate:  12  May  2026  \nThis  is  to  certify  that  Mr.  Koushik  Pratim  Sarma  was  associated  with  our  organization  as  a  \nData\n \nScience\n \nIntern\n \nfrom\n \n10\n \nFebruary\n \n2026\n \nto\n \n12\n \nMay\n \n2026\n.\n \nDuring  his  internship,  he  was  involved  in  various  projects  and  assignments  related  to  Artificial  \nIntelligence\n \nand\n \nData\n \nScience.\n \nHis\n \nresponsibilities\n \nincluded\n \ndata\n \ncollection\n \nand\n \npreprocessing,\n \nexploratory\n \ndata"
+        },
+        {
+          "id": "e05f68bf-ddbd-4c82-856f-5618a8ae6e91",
+          "metadata": {
+            "chunk_id": "e05f68bf-ddbd-4c82-856f-5618a8ae6e91",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092858",
+            "chunk_index": 2,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "of\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows.\n \nThroughout  his  tenure,  Mr.  Sarma  demonstrated  strong  analytical  abilities,  a  keen  interest  in  \nemerging\n \ntechnologies,\n \nand\n \na\n \nproactive\n \napproach\n \nto\n \nlearning.\n \nHe\n \nconsistently\n \ndisplayed\n \nprofessionalism,\n \ndedication,\n \nand\n \nthe\n \nability\n \nto\n \nwork\n \neffectively\n \nboth\n \nindependently\n \nand\n \nwithin\n \na\n \nteam\n \nenvironment."
+        },
+        {
+          "id": "941459fd-43a4-49a9-b417-735a034b7213",
+          "metadata": {
+            "chunk_id": "941459fd-43a4-49a9-b417-735a034b7213",
+            "document_id": "8c6cf096-caa2-4773-a390-de2f1016b749",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-26T21:25:37.092849",
+            "chunk_index": 1,
+            "chunk_count": 4,
+            "user_id": "sanu"
+          },
+          "text": "and\n \npreprocessing,\n \nexploratory\n \ndata\n \nanalysis,\n \nmachine\n \nlearning\n \nmodel\n \ndevelopment,\n \nmodel\n \nevaluation,\n \nand\n \nsupporting\n \nAI-driven\n \nsolutions\n \nfor\n \nbusiness\n \nand\n \ntechnical\n \nrequirements.\n \nHe\n \nalso\n \nassisted\n \nin\n \nanalyzing\n \ndatasets,\n \ngenerating\n \nactionable\n \ninsights,\n \nand\n \ncontributing\n \nto\n \nthe\n \ndevelopment\n \nand\n \noptimization\n \nof\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows."
+        }
+      ],
+      "documents_used": [
+        "8c6cf096-caa2-4773-a390-de2f1016b749"
+      ],
+      "session_id": "f5c88234-d986-4701-87a9-a2ca1f851c52"
+    }
+  ],
+  "jisu": [
+    {
+      "id": "76cfeb93-535f-43ea-8f28-fd7a8508d7a3",
+      "timestamp": "2026-06-28T16:40:43.542774",
+      "query": "what does the document contain?",
+      "answer": "The document is a certification letter stating that Mr. Koushik Pratim Sarma was associated with the organization as a Data Science Intern from February 10, 2026, to May 12, 2026. It outlines his responsibilities during the internship, which included data collection and preprocessing, exploratory data analysis, machine learning model development, model evaluation, and supporting AI-driven solutions. The letter highlights his strong analytical abilities, commitment to quality work, and professionalism, noting that he was a valuable asset to the team. The document is signed by Kopal Mehta, the HR lead at Neural Web.",
+      "retrieved_chunks": [
+        {
+          "id": "96e52670-3b3b-4d98-ac0c-fcbce731bd41",
+          "metadata": {
+            "chunk_id": "96e52670-3b3b-4d98-ac0c-fcbce731bd41",
+            "document_id": "e2b971ed-3000-4152-881e-a6c7ad927bad",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T16:39:35.990494",
+            "chunk_index": 1,
+            "chunk_count": 4,
+            "user_id": "jisu"
+          },
+          "text": "and\n \npreprocessing,\n \nexploratory\n \ndata\n \nanalysis,\n \nmachine\n \nlearning\n \nmodel\n \ndevelopment,\n \nmodel\n \nevaluation,\n \nand\n \nsupporting\n \nAI-driven\n \nsolutions\n \nfor\n \nbusiness\n \nand\n \ntechnical\n \nrequirements.\n \nHe\n \nalso\n \nassisted\n \nin\n \nanalyzing\n \ndatasets,\n \ngenerating\n \nactionable\n \ninsights,\n \nand\n \ncontributing\n \nto\n \nthe\n \ndevelopment\n \nand\n \noptimization\n \nof\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows."
+        },
+        {
+          "id": "19971066-da38-4337-8696-e15d86bf57d1",
+          "metadata": {
+            "chunk_id": "19971066-da38-4337-8696-e15d86bf57d1",
+            "document_id": "e2b971ed-3000-4152-881e-a6c7ad927bad",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T16:39:35.990494",
+            "chunk_index": 0,
+            "chunk_count": 4,
+            "user_id": "jisu"
+          },
+          "text": "TO  WHOM  IT  MAY  CONCERN  \nDate:  12  May  2026  \nThis  is  to  certify  that  Mr.  Koushik  Pratim  Sarma  was  associated  with  our  organization  as  a  \nData\n \nScience\n \nIntern\n \nfrom\n \n10\n \nFebruary\n \n2026\n \nto\n \n12\n \nMay\n \n2026\n.\n \nDuring  his  internship,  he  was  involved  in  various  projects  and  assignments  related  to  Artificial  \nIntelligence\n \nand\n \nData\n \nScience.\n \nHis\n \nresponsibilities\n \nincluded\n \ndata\n \ncollection\n \nand\n \npreprocessing,\n \nexploratory\n \ndata"
+        },
+        {
+          "id": "7c0156a5-0987-466b-94cc-48868044c5d0",
+          "metadata": {
+            "chunk_id": "7c0156a5-0987-466b-94cc-48868044c5d0",
+            "document_id": "e2b971ed-3000-4152-881e-a6c7ad927bad",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T16:39:35.990494",
+            "chunk_index": 3,
+            "chunk_count": 4,
+            "user_id": "jisu"
+          },
+          "text": "and\n \nwithin\n \na\n \nteam\n \nenvironment.\n \nWe  found  him  to  be  sincere,  hardworking,  and  committed  to  delivering  quality  work.  His  \ncontributions\n \nwere\n \nappreciated\n \nby\n \nthe\n \nteam,\n \nand\n \nwe\n \nare\n \nconfident\n \nthat\n \nhe\n \nwill\n \nbe\n \na\n \nvaluable\n \nasset\n \nin\n \nhis\n \nfuture\n \nendeavors.\n \n \nKopal  Mehta  HR  lead,  Neural  Web.  \n info@neuralweb.tech         212  Stockton  Dr  Southlake,  TX,  76092   +1  469  961  6487                    Neuralweb.tech"
+        },
+        {
+          "id": "23dde408-9f2e-4840-a39d-57c77ea08e98",
+          "metadata": {
+            "chunk_id": "23dde408-9f2e-4840-a39d-57c77ea08e98",
+            "document_id": "e2b971ed-3000-4152-881e-a6c7ad927bad",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T16:39:35.990494",
+            "chunk_index": 2,
+            "chunk_count": 4,
+            "user_id": "jisu"
+          },
+          "text": "of\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows.\n \nThroughout  his  tenure,  Mr.  Sarma  demonstrated  strong  analytical  abilities,  a  keen  interest  in  \nemerging\n \ntechnologies,\n \nand\n \na\n \nproactive\n \napproach\n \nto\n \nlearning.\n \nHe\n \nconsistently\n \ndisplayed\n \nprofessionalism,\n \ndedication,\n \nand\n \nthe\n \nability\n \nto\n \nwork\n \neffectively\n \nboth\n \nindependently\n \nand\n \nwithin\n \na\n \nteam\n \nenvironment."
+        }
+      ],
+      "documents_used": [
+        "e2b971ed-3000-4152-881e-a6c7ad927bad"
+      ],
+      "session_id": "70a15cfe-0a9d-4782-bf64-b8fd57b6e0c8"
     },
     {
-      "timestamp": "2026-06-26T09:04:58.955335",
-      "query": "please tell me what is the total revenue of nvidia 2026 for q1",
-      "answer": "The total revenue of NVIDIA for the first quarter of fiscal year 2026 is $75,246 million from the Data Center segment, $37,869 million from Hyperscale, $37,377 million from AI Clouds, Industrial, & Enterprise, and $6,369 million from Edge Computing. \n\nTo find the total revenue, we sum these amounts:\n\nTotal Revenue = $75,246 + $37,869 + $37,377 + $6,369 = $156,861 million. \n\nTherefore, the total revenue for NVIDIA in Q1 2026 is $156,861 million."
-    },
-    {
-      "timestamp": "2026-06-26T09:05:33.563677",
-      "query": "what is nvda",
-      "answer": "NVIDIA Corporation, commonly referred to as NVDA, is a data center-scale AI infrastructure company headquartered in Santa Clara, California. It was incorporated in California in April 1993 and reincorporated in Delaware in April 1998. The company operates in two segments: \"Compute & Networking\" and \"Graphics.\""
+      "id": "a7fbd7c6-890a-49a4-a927-535a051c05f6",
+      "timestamp": "2026-06-28T16:41:30.565449",
+      "query": "who is koushik pratim sarma\n",
+      "answer": "Koushik Pratim Sarma is an individual who was associated with Neural Web as a Data Science Intern from 10 February 2026 to 12 May 2026. During his internship, he worked on various projects related to Artificial Intelligence and Data Science, demonstrating strong analytical abilities and a proactive approach to learning. He was involved in tasks such as data collection, preprocessing, exploratory data analysis, machine learning model development, and supporting AI-driven solutions. His contributions were appreciated by the team, and he is regarded as a hardworking and committed individual.",
+      "retrieved_chunks": [
+        {
+          "id": "19971066-da38-4337-8696-e15d86bf57d1",
+          "metadata": {
+            "chunk_id": "19971066-da38-4337-8696-e15d86bf57d1",
+            "document_id": "e2b971ed-3000-4152-881e-a6c7ad927bad",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T16:39:35.990494",
+            "chunk_index": 0,
+            "chunk_count": 4,
+            "user_id": "jisu"
+          },
+          "text": "TO  WHOM  IT  MAY  CONCERN  \nDate:  12  May  2026  \nThis  is  to  certify  that  Mr.  Koushik  Pratim  Sarma  was  associated  with  our  organization  as  a  \nData\n \nScience\n \nIntern\n \nfrom\n \n10\n \nFebruary\n \n2026\n \nto\n \n12\n \nMay\n \n2026\n.\n \nDuring  his  internship,  he  was  involved  in  various  projects  and  assignments  related  to  Artificial  \nIntelligence\n \nand\n \nData\n \nScience.\n \nHis\n \nresponsibilities\n \nincluded\n \ndata\n \ncollection\n \nand\n \npreprocessing,\n \nexploratory\n \ndata"
+        },
+        {
+          "id": "23dde408-9f2e-4840-a39d-57c77ea08e98",
+          "metadata": {
+            "chunk_id": "23dde408-9f2e-4840-a39d-57c77ea08e98",
+            "document_id": "e2b971ed-3000-4152-881e-a6c7ad927bad",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T16:39:35.990494",
+            "chunk_index": 2,
+            "chunk_count": 4,
+            "user_id": "jisu"
+          },
+          "text": "of\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows.\n \nThroughout  his  tenure,  Mr.  Sarma  demonstrated  strong  analytical  abilities,  a  keen  interest  in  \nemerging\n \ntechnologies,\n \nand\n \na\n \nproactive\n \napproach\n \nto\n \nlearning.\n \nHe\n \nconsistently\n \ndisplayed\n \nprofessionalism,\n \ndedication,\n \nand\n \nthe\n \nability\n \nto\n \nwork\n \neffectively\n \nboth\n \nindependently\n \nand\n \nwithin\n \na\n \nteam\n \nenvironment."
+        },
+        {
+          "id": "7c0156a5-0987-466b-94cc-48868044c5d0",
+          "metadata": {
+            "chunk_id": "7c0156a5-0987-466b-94cc-48868044c5d0",
+            "document_id": "e2b971ed-3000-4152-881e-a6c7ad927bad",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T16:39:35.990494",
+            "chunk_index": 3,
+            "chunk_count": 4,
+            "user_id": "jisu"
+          },
+          "text": "and\n \nwithin\n \na\n \nteam\n \nenvironment.\n \nWe  found  him  to  be  sincere,  hardworking,  and  committed  to  delivering  quality  work.  His  \ncontributions\n \nwere\n \nappreciated\n \nby\n \nthe\n \nteam,\n \nand\n \nwe\n \nare\n \nconfident\n \nthat\n \nhe\n \nwill\n \nbe\n \na\n \nvaluable\n \nasset\n \nin\n \nhis\n \nfuture\n \nendeavors.\n \n \nKopal  Mehta  HR  lead,  Neural  Web.  \n info@neuralweb.tech         212  Stockton  Dr  Southlake,  TX,  76092   +1  469  961  6487                    Neuralweb.tech"
+        },
+        {
+          "id": "96e52670-3b3b-4d98-ac0c-fcbce731bd41",
+          "metadata": {
+            "chunk_id": "96e52670-3b3b-4d98-ac0c-fcbce731bd41",
+            "document_id": "e2b971ed-3000-4152-881e-a6c7ad927bad",
+            "document_name": "Koushik - Experience letter.pdf",
+            "document_type": "pdf",
+            "upload_date": "2026-06-28T16:39:35.990494",
+            "chunk_index": 1,
+            "chunk_count": 4,
+            "user_id": "jisu"
+          },
+          "text": "and\n \npreprocessing,\n \nexploratory\n \ndata\n \nanalysis,\n \nmachine\n \nlearning\n \nmodel\n \ndevelopment,\n \nmodel\n \nevaluation,\n \nand\n \nsupporting\n \nAI-driven\n \nsolutions\n \nfor\n \nbusiness\n \nand\n \ntechnical\n \nrequirements.\n \nHe\n \nalso\n \nassisted\n \nin\n \nanalyzing\n \ndatasets,\n \ngenerating\n \nactionable\n \ninsights,\n \nand\n \ncontributing\n \nto\n \nthe\n \ndevelopment\n \nand\n \noptimization\n \nof\n \nAI\n \nand\n \ndata\n \nscience\n \nworkflows."
+        }
+      ],
+      "documents_used": [
+        "e2b971ed-3000-4152-881e-a6c7ad927bad"
+      ],
+      "session_id": "70a15cfe-0a9d-4782-bf64-b8fd57b6e0c8"
     }
   ]
 }

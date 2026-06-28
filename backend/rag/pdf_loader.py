@@ -1,20 +1,14 @@
 from pathlib import Path
-
-try:
-    from opendataloader import OpenDataLoader
-except ImportError:  # pragma: no cover
-    OpenDataLoader = None
+from pypdf import PdfReader
 
 
 def extract_text_from_pdf(path: Path) -> str:
-    if OpenDataLoader is None:
-        raise RuntimeError("opendataloader is not installed")
+    reader = PdfReader(str(path))
 
-    loader = OpenDataLoader(str(path))
-    documents = loader.load()
-    parts = []
-    for document in documents:
-        content = getattr(document, "page_content", None) or getattr(document, "text", None) or ""
-        if content:
-            parts.append(str(content))
-    return "\n\n".join(parts)
+    pages = []
+    for page in reader.pages:
+        text = page.extract_text()
+        if text:
+            pages.append(text)
+
+    return "\n\n".join(pages)

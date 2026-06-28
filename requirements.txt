@@ -3,6 +3,9 @@ uvicorn[standard]
 python-multipart
 pydantic
 pydantic-settings
+python-jose[cryptography]
+passlib[bcrypt]
+python-dotenv
 langchain
 langchain-community
 langchain-openai
@@ -13,5 +16,7 @@ qdrant-client
 sentence-transformers
 transformers
 torch
+rank-bm25
 streamlit
 requests
+aiofiles
