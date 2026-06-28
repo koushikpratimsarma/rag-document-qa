@@ -8,7 +8,8 @@ from datetime import datetime
 
 from fastapi import Depends, FastAPI, File, HTTPException, UploadFile, Query
 from langchain_openai import ChatOpenAI
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+#from langchain_text_splitters import RecursiveCharacterTextSplitter
+from backend.rag.chunking import get_text_splitter
 from pydantic import BaseModel
 from backend.auth import get_current_user_optional, get_current_user, router as auth_router
 from backend.history import add_history, router as history_router
@@ -85,12 +86,12 @@ def get_vector_store():
     return get_qdrant_vector_store_instance()
 
 
-def get_text_splitter():
-    return RecursiveCharacterTextSplitter(
-        chunk_size=settings.max_chunk_size,
-        chunk_overlap=settings.chunk_overlap,
-        separators=["\n\n", "\n", ". ", " ", ""]
-    )
+# def get_text_splitter():
+#     return RecursiveCharacterTextSplitter(
+#         chunk_size=settings.max_chunk_size,
+#         chunk_overlap=settings.chunk_overlap,
+#         separators=["\n\n", "\n", ". ", " ", ""]
+#     )
 
 
 # Global instances
