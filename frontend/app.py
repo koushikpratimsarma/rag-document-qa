@@ -1,332 +1,733 @@
-import json
 import os
+import re
+import zipfile
+from io import BytesIO
+from pathlib import Path
+import uuid
 import requests
 import streamlit as st
-from datetime import datetime
+from pypdf import PdfReader
 
-# Configuration
 BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
-# Page config
 st.set_page_config(
-    page_title="RAG Document QA System",
+    page_title="RAG Document QA",
+    page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded",
-    menu_items={"About": "Professional RAG Document Q&A Engine with Advanced Search"}
+    menu_items={"About": "Document-first RAG assistant"},
 )
 
-# Professional CSS styling
-st.markdown("""
-<style>
-    * {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+st.markdown(
+    """
+    <style>
+    :root {
+        --bg-main: #070b16;
+        --bg-sidebar: #080d1a;
+        --bg-card: #101827;
+        --bg-card-soft: #132033;
+        --bg-input: #172235;
+        --border: rgba(148, 163, 184, 0.18);
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --accent: #3b82f6;
+        --accent-2: #10b981;
+        --danger: #ef4444;
+        --warning: #f59e0b;
     }
-    
-    .main {
-        background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+
+    .stApp {
+        background: linear-gradient(135deg, #070b16 0%, #0f172a 55%, #111827 100%);
+        color: var(--text-main);
     }
-    
-    .header-section {
-        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-        padding: 40px 20px;
-        border-radius: 12px;
-        color: white;
-        margin-bottom: 30px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+    .block-container {
+        padding-top: 1.2rem;
+        max-width: 1100px;
     }
-    
-    .header-title {
-        font-size: 32px;
-        font-weight: 700;
-        margin: 0;
-        color: white;
+
+    h1, h2, h3, h4, h5, h6, p, label, span, div {
+        color: var(--text-main) !important;
     }
-    
-    .header-subtitle {
-        font-size: 14px;
-        opacity: 0.9;
-        margin: 8px 0 0 0;
-        color: #e0e0e0;
+
+    [data-testid="stSidebar"] {
+        background: var(--bg-sidebar);
+        border-right: 1px solid var(--border);
     }
-    
-    .answer-container {
-        background: white;
-        padding: 25px;
-        border-radius: 12px;
-        border-left: 5px solid #3498db;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        margin: 20px 0;
+
+    [data-testid="stSidebar"] * {
+        color: var(--text-main) !important;
     }
-    
-    .answer-text {
-        font-size: 16px;
-        line-height: 1.8;
-        color: #2c3e50;
+
+    .hero-card {
+        background: linear-gradient(135deg, rgba(59,130,246,0.22), rgba(16,185,129,0.12));
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 28px;
+        margin-bottom: 22px;
+        box-shadow: 0 20px 45px rgba(0,0,0,0.25);
     }
-    
-    .chunk-card {
-        background: white;
-        padding: 18px;
-        border-radius: 10px;
-        border-left: 4px solid #27ae60;
-        margin: 15px 0;
-        box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+
+    .hero-title {
+        font-size: 34px;
+        font-weight: 800;
+        margin-bottom: 8px;
+        background: linear-gradient(90deg, #60a5fa, #34d399);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
-    
-    .chunk-content {
-        background: #f8f9fa;
-        padding: 15px;
-        border-radius: 6px;
-        margin-top: 12px;
-        color: #555;
-        font-size: 14px;
+
+    .hero-subtitle {
+        color: var(--text-muted) !important;
+        font-size: 15px;
         line-height: 1.6;
-        border: 1px solid #e9ecef;
     }
-    
+
     .badge {
         display: inline-block;
-        padding: 4px 12px;
-        border-radius: 20px;
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: rgba(16,185,129,0.16);
+        color: #6ee7b7 !important;
+        border: 1px solid rgba(16,185,129,0.25);
         font-size: 12px;
-        font-weight: 500;
-        margin-right: 8px;
-        margin-bottom: 8px;
+        font-weight: 700;
+        margin-left: 8px;
     }
-    
-    .badge-file {
-        background: #e3f2fd;
-        color: #1976d2;
-    }
-    
-    .badge-info {
-        background: #f3e5f5;
-        color: #7b1fa2;
-    }
-    
-    .success-message {
-        background: #d4edda;
-        border-left: 4px solid #28a745;
-        padding: 15px;
-        border-radius: 6px;
-        color: #155724;
-        margin: 10px 0;
-    }
-    
-    .error-message {
-        background: #f8d7da;
-        border-left: 4px solid #dc3545;
-        padding: 15px;
-        border-radius: 6px;
-        color: #721c24;
-        margin: 10px 0;
-    }
-    
-    .info-message {
-        background: #d1ecf1;
-        border-left: 4px solid #0c5460;
-        padding: 15px;
-        border-radius: 6px;
-        color: #0c5460;
-        margin: 10px 0;
-    }
-    
-    .history-card {
-        background: white;
+
+    .card {
+        background: rgba(15, 23, 42, 0.88);
+        border: 1px solid var(--border);
+        border-radius: 18px;
         padding: 18px;
+        margin-bottom: 14px;
+        box-shadow: 0 14px 35px rgba(0,0,0,0.22);
+    }
+
+    .answer-card {
+        background: rgba(20, 31, 50, 0.95);
+        border: 1px solid rgba(59,130,246,0.25);
+        border-radius: 18px;
+        padding: 18px;
+        margin-bottom: 14px;
+    }
+
+    .question-pill {
+        background: rgba(59,130,246,0.18);
+        border: 1px solid rgba(59,130,246,0.28);
+        border-radius: 14px;
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    .highlight {
+        background: rgba(245,158,11,0.13);
+        border-left: 4px solid var(--warning);
+        padding: 14px;
         border-radius: 12px;
-        border: 1px solid #d8dee4;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        margin: 18px 0;
     }
-    
-    .history-query {
-        font-weight: 600;
-        color: #2c3e50;
-        margin-bottom: 12px;
+
+    .stTextInput input,
+    .stTextArea textarea,
+    [data-baseweb="select"] {
+        background: var(--bg-input) !important;
+        color: var(--text-main) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 12px !important;
     }
-    
-    .history-answer {
-        font-size: 14px;
-        color: #3b4b63;
-        line-height: 1.7;
+
+    .stButton button {
+        background: linear-gradient(90deg, var(--accent), var(--accent-2)) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 12px !important;
+        font-weight: 700 !important;
+        padding: 0.55rem 1rem !important;
     }
-    
-    .top-bar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-        color: white;
-        padding: 14px 18px;
-        border-radius: 16px;
-        border: 1px solid rgba(255,255,255,0.12);
-        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        margin-bottom: 16px;
+
+    .stButton button:hover {
+        filter: brightness(1.1);
+        transform: translateY(-1px);
     }
-    
-    .stButton > button {
-        background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-        color: white;
-        font-weight: 600;
-        border: none;
-        border-radius: 8px;
-        padding: 10px 25px;
+
+    [data-testid="stFileUploader"] {
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px dashed rgba(148,163,184,0.35);
+        border-radius: 18px;
+        padding: 16px;
     }
-    
-    .stButton > button:hover {
-        background: linear-gradient(135deg, #2980b9 0%, #1f618d 100%);
-        box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+
+    [data-testid="stChatInput"] {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid var(--border);
     }
-</style>
-""", unsafe_allow_html=True)
+
+    [data-testid="stExpander"] {
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+    }
+
+    code, pre {
+        background: #020617 !important;
+        color: #dbeafe !important;
+        border-radius: 12px !important;
+    }
+
+    hr {
+        border-color: var(--border);
+    }
+
+    .small-muted {
+        color: var(--text-muted) !important;
+        font-size: 13px;
+    }
+
+    .sidebar-brand {
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 4px;
+    }
+
+    .sidebar-sub {
+        color: var(--text-muted) !important;
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
 
 
-# Session state management
-def init_session_state():
-    if "token" not in st.session_state:
-        st.session_state.token = None
-    if "username" not in st.session_state:
-        st.session_state.username = None
-    if "session_id" not in st.session_state:
-        st.session_state.session_id = None
-    if "conversation_history" not in st.session_state:
-        st.session_state.conversation_history = []
+.sidebar-section-title {
+    color: var(--text-muted) !important;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 14px 0 8px 0;
+    letter-spacing: 0.06em;
+}
+
+[data-testid="stSidebar"] .stButton button {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    background: rgba(15, 23, 42, 0.75) !important;
+    border: 1px solid rgba(148, 163, 184, 0.16) !important;
+    color: var(--text-main) !important;
+    margin-bottom: 6px !important;
+}
+
+[data-testid="stSidebar"] .stButton button:hover {
+    background: rgba(59, 130, 246, 0.22) !important;
+    border-color: rgba(59, 130, 246, 0.45) !important;
+}
+
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 
-init_session_state()
+def init_state():
+    defaults = {
+        "username": None,
+        "session_id": None,
+        "documents": [],
+        "history": [],
+        "preview_map": {},
+        "show_citations": True,
+        "sessions": [],
+        "selected_session": None,
+    }
+    for key, value in defaults.items():
+        if key not in st.session_state:
+            st.session_state[key] = value
 
 
-# Helper functions
+init_state()
+
+
 def make_request(endpoint, method="GET", data=None, files=None):
-    """Make request to backend API"""
     headers = {}
-    if st.session_state.token:
-        headers["Authorization"] = f"Bearer {st.session_state.token}"
-    
-    url = f"{BACKEND_URL}{endpoint}"
-    
+    if st.session_state.username:
+        headers["X-Username"] = st.session_state.username
+
     try:
         if method == "GET":
-            response = requests.get(url, headers=headers, params=data)
-        elif method == "POST":
+            return requests.get(f"{BACKEND_URL}{endpoint}", headers=headers, params=data, timeout=60)
+        if method == "POST":
             if files:
-                response = requests.post(url, headers=headers, files=files)
-            else:
-                response = requests.post(url, headers=headers, json=data)
-        elif method == "DELETE":
-            response = requests.delete(url, headers=headers, json=data)
-        
-        return response
-    except Exception as e:
-        st.error(f"Connection error: {str(e)}")
+                return requests.post(f"{BACKEND_URL}{endpoint}", headers=headers, files=files, timeout=60)
+            return requests.post(f"{BACKEND_URL}{endpoint}", headers=headers, json=data, timeout=60)
+        if method == "DELETE":
+            return requests.delete(f"{BACKEND_URL}{endpoint}", headers=headers, json=data, timeout=60)
+    except Exception as exc:
+        st.sidebar.error(f"Connection error: {exc}")
         return None
 
 
 def login_user(username, password):
-    """Login user and get token"""
+    username = username.strip()
+    if len(username) < 3:
+        return False, "Username must be at least 3 characters"
+    if len(password) < 6:
+        return False, "Password must be at least 6 characters"
+
     response = make_request("/auth/login", method="POST", data={"username": username, "password": password})
     if response and response.status_code == 200:
-        data = response.json()
-        st.session_state.token = data["access_token"]
         st.session_state.username = username
         st.session_state.session_id = None
         return True, "Login successful"
-    elif response:
-        return False, response.json().get("detail", "Login failed")
-    return False, "Connection error"
+
+    try:
+        return False, response.json().get("detail", "Login failed") if response else "Unable to reach backend"
+    except Exception:
+        return False, "Login failed"
 
 
 def register_user(username, password):
-    """Register new user"""
+    username = username.strip()
     response = make_request("/auth/register", method="POST", data={"username": username, "password": password})
     if response and response.status_code == 200:
-        data = response.json()
-        st.session_state.token = data["access_token"]
         st.session_state.username = username
         st.session_state.session_id = None
         return True, "Registration successful"
-    elif response:
-        return False, response.json().get("detail", "Registration failed")
-    return False, "Connection error"
+    return False, (response.json().get("detail") if response else "Unable to reach backend")
 
 
-def upload_document(files):
-    """Upload one or more documents"""
-    if len(files) == 1:
-        endpoint = "/upload"
+def load_documents():
+    data = {}
+
+    if st.session_state.session_id:
+        data["session_id"] = st.session_state.session_id
+
+    response = make_request("/documents/list", method="GET", data=data)
+
+    if response and response.status_code == 200:
+        st.session_state.documents = response.json().get("documents", [])
     else:
-        endpoint = "/upload_batch"
-    
-    file_data = [("file", (f.name, f.getvalue(), f.type)) for f in files]
-    response = make_request(endpoint, method="POST", files=file_data)
-    return response
+        st.session_state.documents = []
 
 
-def query_documents(query, use_hybrid=True, use_reranking=True, metadata_filters=None):
-    """Query documents"""
-    data = {
-        "query": query,
-        "top_k": 5,
-        "session_id": st.session_state.session_id,
-        "use_hybrid_search": use_hybrid,
-        "use_reranking": use_reranking,
-        "metadata_filters": metadata_filters or {}
-    }
-    response = make_request("/query", method="POST", data=data)
-    return response
 
-
-def get_history():
-    """Get user's query history"""
-    response = make_request("/history/", method="GET")
-    return response
-
-
-def get_sessions():
-    """Get user's conversation sessions"""
+def load_sessions():
     response = make_request("/history/sessions", method="GET")
-    return response
+
+    if response and response.status_code == 200:
+        data = response.json()
+
+        if isinstance(data, dict):
+            st.session_state.sessions = (
+                data.get("sessions")
+                or data.get("data")
+                or data.get("history")
+                or []
+            )
+        elif isinstance(data, list):
+            st.session_state.sessions = data
+        else:
+            st.session_state.sessions = []
+
+        # temporary debug
+        # st.sidebar.write("Sessions response:", data)
+
+    else:
+        st.session_state.sessions = []
 
 
-# Main UI
-def render_auth_page():
-    """Render authentication page"""
-    col1, col2 = st.columns([1, 1])
-    
-    with col1:
-        st.markdown("""
-        <div class="header-section">
-            <h1 class="header-title">RAG Document QA</h1>
-            <p class="header-subtitle">Upload documents and ask intelligent questions powered by advanced search</p>
+def load_session_history(session_id):
+    response = make_request("/history/", method="GET", data={"session_id": session_id})
+
+    if response and response.status_code == 200:
+        data = response.json()
+        history = data.get("history", [])
+
+        st.session_state.history = [
+            {
+                "question": item.get("query", ""),
+                "answer": item.get("answer", ""),
+                "citations": item.get("retrieved_chunks", [])
+            }
+            for item in reversed(history)
+        ]
+
+        st.session_state.session_id = session_id
+        st.session_state.selected_session = session_id
+        load_documents()
+
+
+def delete_current_chat():
+    if not st.session_state.session_id:
+        st.session_state.history = []
+        return
+
+    make_request(
+        f"/history/session/{st.session_state.session_id}/clear",
+        method="POST"
+    )
+
+    st.session_state.session_id = None
+    st.session_state.selected_session = None
+    st.session_state.history = []
+    load_sessions()
+
+
+
+def delete_document(document_id):
+    response = make_request("/documents/delete", method="DELETE", data={"document_id": document_id})
+    if response and response.status_code == 200:
+        load_documents()
+        st.success("Document removed")
+    else:
+        st.error("Could not remove the document")
+
+
+def extract_text_preview(uploaded_file):
+    suffix = Path(uploaded_file.name).suffix.lower()
+    if suffix == ".pdf":
+        try:
+            reader = PdfReader(BytesIO(uploaded_file.getvalue()))
+            return "\n\n".join(page.extract_text() or "" for page in reader.pages)[:4000]
+        except Exception:
+            return "Preview unavailable"
+
+    if suffix == ".docx":
+        try:
+            with zipfile.ZipFile(BytesIO(uploaded_file.getvalue())) as archive:
+                xml = archive.read("word/document.xml").decode("utf-8", errors="ignore")
+            cleaned = re.sub(r"<[^>]+>", " ", xml)
+            return re.sub(r"\s+", " ", cleaned)[:4000]
+        except Exception:
+            return "Preview unavailable"
+
+    if suffix == ".pptx":
+        try:
+            with zipfile.ZipFile(BytesIO(uploaded_file.getvalue())) as archive:
+                parts = []
+                for name in archive.namelist():
+                    if name.startswith("ppt/slides/slide") and name.endswith(".xml"):
+                        xml = archive.read(name).decode("utf-8", errors="ignore")
+                        parts.append(re.sub(r"<[^>]+>", " ", xml))
+                return re.sub(r"\s+", " ", " ".join(parts))[:4000]
+        except Exception:
+            return "Preview unavailable"
+
+    return uploaded_file.getvalue().decode("utf-8", errors="ignore")[:4000]
+
+
+def upload_files(files):
+    if not st.session_state.session_id:
+        st.session_state.session_id = str(uuid.uuid4())
+
+    form_data = [("files", (f.name, f.getvalue(), f.type)) for f in files]
+
+    headers = {}
+    if st.session_state.username:
+        headers["X-Username"] = st.session_state.username
+
+    data = {
+        "session_id": st.session_state.session_id
+    }
+
+    try:
+        response = requests.post(
+            f"{BACKEND_URL}/documents/upload_batch",
+            headers=headers,
+            files=form_data,
+            data=data,
+            timeout=120,
+        )
+
+        if response and response.status_code == 200:
+            load_documents()
+            st.success(f"Uploaded {len(files)} file(s)")
+        else:
+            st.error("Upload failed")
+
+    except Exception as exc:
+        st.error(f"Upload error: {exc}")
+
+
+def ask_question(question):
+    response = make_request(
+        "/documents/query",
+        method="POST",
+        data={"query": question, "top_k": 4, "session_id": st.session_state.session_id},
+    )
+    if response and response.status_code == 200:
+        data = response.json()
+        if not st.session_state.session_id:
+            st.session_state.session_id = data.get("session_id")
+        st.session_state.history.append({
+            "question": question,
+            "answer": data.get("answer", ""),
+            "citations": data.get("citations", [])
+        })
+
+        load_sessions()
+        return data
+    st.error("Unable to answer right now")
+    return None
+
+
+def render_sidebar():
+    with st.sidebar:
+        if st.session_state.username:
+            st.success(f"Signed in as {st.session_state.username}")
+            if st.button("Logout"):
+                st.session_state.username = None
+                st.session_state.session_id = None
+                st.session_state.documents = []
+                st.session_state.history = []
+                st.rerun()
+
+        st.divider()
+
+        st.markdown("### 💬 Conversations")
+
+        load_sessions()
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            if st.button("➕ New Chat", use_container_width=True):
+                st.session_state.session_id = str(uuid.uuid4())
+                st.session_state.selected_session = None
+                st.session_state.history = []
+                st.session_state.documents = []
+                st.rerun()
+
+        with col2:
+            if st.button("🗑 Delete", use_container_width=True):
+                delete_current_chat()
+                st.rerun()
+
+        st.markdown("<div class='sidebar-section-title'>Recent chats</div>", unsafe_allow_html=True)
+
+        if st.session_state.sessions:
+            for session in st.session_state.sessions:
+                sid = session.get("session_id")
+
+                title = (
+                    session.get("title")
+                    or session.get("first_question")
+                    or session.get("query")
+                    or f"Chat {sid[:8]}"
+                )
+
+                is_active = sid == st.session_state.selected_session        
+
+                if st.button(
+                    f"💬 {title[:32]}",
+                    key=f"session_{sid}",
+                    use_container_width=True,
+                    type="primary" if is_active else "secondary",
+                ):
+                    load_session_history(sid)
+                    st.rerun()
+        else:
+            st.caption("No previous chats yet")
+
+def render_hero():
+    st.markdown(
+        """
+        <div class="hero-card">
+            <div class="hero-title">⚡RAG Document QA</div>
+            <div class="hero-subtitle">
+                Upload your documents and ask grounded questions. 
+            </div>
         </div>
-        """, unsafe_allow_html=True)
-    
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_document_panel():
+    with st.expander("📤 Upload or manage documents", expanded=not st.session_state.documents):
+        uploaded_files = st.file_uploader(
+            "Choose files",
+            accept_multiple_files=True,
+            type=["pdf", "docx", "txt", "ppt", "pptx", "md"],
+        )
+
+        if uploaded_files:
+            st.markdown(
+                f"<div class='card'>Selected files: <b>{len(uploaded_files)}</b></div>",
+                unsafe_allow_html=True,
+            )
+
+            for uploaded_file in uploaded_files:
+                preview = extract_text_preview(uploaded_file)
+                st.session_state.preview_map[uploaded_file.name] = preview
+
+                with st.expander(f"Preview: {uploaded_file.name}"):
+                    st.code(preview[:2000] if len(preview) > 2000 else preview)
+
+            if st.button("Upload files", type="primary"):
+                upload_files(uploaded_files)
+                st.rerun()
+
+        st.divider()
+        st.subheader("📄 Uploaded documents")
+
+        if st.session_state.documents:
+            for doc in st.session_state.documents:
+                col1, col2 = st.columns([5, 1])
+
+                with col1:
+                    st.markdown(
+                        f"""
+                        <div class='card'>
+                            <b>📄 {doc['document_name']}</b><br>
+                            <span class='small-muted'>
+                                {doc['document_type']} • {doc['chunk_count']} chunks • {doc['upload_date']}
+                            </span>
+                        </div>
+                        """,
+                        unsafe_allow_html=True,
+                    )
+
+                with col2:
+                    if st.button("Delete", key=f"del_{doc['document_id']}"):
+                        delete_document(doc["document_id"])
+                        st.rerun()
+        else:
+            st.caption("No documents uploaded yet.")
+
+
+def render_chat_area():
+    # ---------------- Header ----------------
+
+    if st.session_state.history:
+        for entry in st.session_state.history:
+
+            st.markdown(
+                f"""
+                <div class="question-pill">
+                    <b>You:</b> {entry['question']}
+                </div>
+
+                <div class="answer-card">
+                    <b>Assistant:</b><br>
+                    {entry['answer']}
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+            if entry.get("citations"):
+                with st.expander("View Retrieved Chunks"):
+                    for index, citation in enumerate(entry["citations"], 1):
+
+                        escaped_text = (
+                            citation["text"]
+                            .replace("&", "&amp;")
+                            .replace("<", "&lt;")
+                            .replace(">", "&gt;")
+                        )
+
+                        st.markdown(
+                            f"""
+                            <div class="highlight">
+                                <b>Chunk {index}</b><br><br>
+                                <b>📄 Document:</b> {citation['document_name']}<br>
+                                <b>🎯 Similarity Score:</b> {citation['score']:.4f}<br><br>
+                                <b>Retrieved Chunk</b><br><br>
+                                {escaped_text}
+                            </div>
+                            """,
+                            unsafe_allow_html=True,
+                        )
+
+                        st.markdown("---")
+
+        # ---------------- Uploaded Documents Review ----------------
+
+    if st.session_state.documents:
+        with st.expander("📄 Uploaded documents", expanded=True):
+            for doc in st.session_state.documents:
+                st.markdown(
+                    f"""
+                    <div class="card">
+                        <b>📄 {doc['document_name']}</b><br>
+                        <span class="small-muted">
+                            {doc['document_type']} • {doc['chunk_count']} chunks • {doc['upload_date']}
+                        </span>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
+    else:
+        st.caption("No documents uploaded yet.")
+
+
+    prompt = st.chat_input(
+        "Ask your documents anything...",
+        accept_file="multiple",
+        file_type=["pdf", "docx", "txt", "ppt", "pptx", "md"],
+    )
+
+    if prompt:
+
+        question = prompt.text
+        uploaded_files = prompt.files
+
+        if uploaded_files:
+            upload_files(uploaded_files)
+            load_documents()
+
+        if question.strip():
+
+            if not st.session_state.documents:
+                st.warning("Please upload a document first.")
+                return
+
+            with st.spinner("Searching your documents..."):
+                ask_question(question)
+
+            st.rerun()
+
+def render_workspace():
+    render_hero()
+    render_chat_area()
+
+
+def render_auth_page():
+    st.markdown(
+        """
+        <div class="hero-card">
+            <div class="hero-title">⚡RAG Document QA</div>
+            <div class="hero-subtitle">
+                Login or create an account to upload documents and chat with your knowledge base.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    col1, col2, col3 = st.columns([1, 1.2, 1])
+
     with col2:
+        st.markdown("<div class='card'><h3>Welcome back</h3></div>", unsafe_allow_html=True)
+
         tab1, tab2 = st.tabs(["Login", "Register"])
-        
+
         with tab1:
-            st.subheader("Login")
-            username = st.text_input("Username", key="login_username")
-            password = st.text_input("Password", type="password", key="login_password")
-            
-            if st.button("Login", key="login_btn"):
+            username = st.text_input("Username", key="auth_login_username")
+            password = st.text_input("Password", type="password", key="auth_login_password")
+
+            if st.button("Login", use_container_width=True):
                 success, message = login_user(username, password)
                 if success:
                     st.success(message)
                     st.rerun()
                 else:
                     st.error(message)
-        
+
         with tab2:
-            st.subheader("Register")
-            username = st.text_input("Username", key="reg_username")
-            password = st.text_input("Password", type="password", key="reg_password")
-            password_confirm = st.text_input("Confirm Password", type="password", key="reg_password_confirm")
-            
-            if st.button("Register", key="register_btn"):
-                if password != password_confirm:
-                    st.error("Passwords do not match")
+            username = st.text_input("Create username", key="auth_register_username")
+            password = st.text_input("Create password", type="password", key="auth_register_password")
+
+            if st.button("Create account", use_container_width=True):
+                if len(username.strip()) < 3:
+                    st.error("Username must be at least 3 characters")
                 elif len(password) < 6:
                     st.error("Password must be at least 6 characters")
                 else:
@@ -336,220 +737,16 @@ def render_auth_page():
                         st.rerun()
                     else:
                         st.error(message)
-    
-    # Demo info
-    st.info("📝 Create an account to save your query history and conversation sessions across sessions.")
 
 
-def render_main_app():
-    """Render main application"""
-    # Top bar with user info
-    st.markdown(f"""
-    <div class="top-bar">
-        <div>
-            <h3 class="header-title" style="margin: 0; font-size: 24px;">RAG Document QA</h3>
-            <p style="margin: 8px 0 0 0; font-size: 12px; color: #e0e0e0;">
-                Advanced Search with Hybrid Methods & Re-ranking
-            </p>
-        </div>
-        <div style="text-align: right; color: white;">
-            <p style="margin: 0; font-size: 13px;"><strong>{st.session_state.username}</strong></p>
-            <p style="margin: 4px 0 0 0; font-size: 12px; color: #e0e0e0;">Authenticated User</p>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    if st.button("Logout", key="logout_btn", help="Logout from your account"):
-        st.session_state.token = None
-        st.session_state.username = None
-        st.session_state.session_id = None
-        st.session_state.conversation_history = []
-        st.rerun()
-    
-    # Main tabs
-    tab1, tab2, tab3, tab4 = st.tabs(["📤 Upload Documents", "❓ Query Documents", "📜 History", "⚙️ Settings"])
-    
-    with tab1:
-        st.header("Upload Documents")
-        st.info("Upload PDF or text documents to build your knowledge base. Multiple file upload is supported.")
-        
-        uploaded_files = st.file_uploader(
-            "Choose documents to upload",
-            type=["pdf", "txt"],
-            accept_multiple_files=True,
-            help="Upload one or more PDF or text files"
-        )
-        
-        if uploaded_files:
-            st.write(f"**Files selected:** {len(uploaded_files)}")
-            for f in uploaded_files:
-                st.write(f"- {f.name} ({f.size / 1024:.1f} KB)")
-            
-            if st.button("Upload", type="primary"):
-                with st.spinner("Uploading documents..."):
-                    response = upload_document(uploaded_files)
-                    
-                    if response and response.status_code in [200, 201]:
-                        data = response.json()
-                        if isinstance(data, list):
-                            total_chunks = sum(d.get("added_chunks", 0) for d in data)
-                            st.success(f"✅ Uploaded {len(data)} file(s) with {total_chunks} total chunks")
-                        else:
-                            st.success(f"✅ Document uploaded! Added {data.get('added_chunks', 0)} chunks")
-                    else:
-                        error_msg = response.json().get("detail", "Upload failed") if response else "Connection error"
-                        st.error(f"❌ Upload failed: {error_msg}")
-    
-    with tab2:
-        st.header("Query Documents")
-        
-        col1, col2 = st.columns([3, 1])
-        
-        with col1:
-            query = st.text_area(
-                "Ask your question",
-                placeholder="What would you like to know about your documents?",
-                height=100
-            )
-        
-        with col2:
-            st.subheader("Search Options")
-            use_hybrid = st.checkbox("🔀 Hybrid Search", value=True, help="Combine BM25 and vector search")
-            use_reranking = st.checkbox("📊 Re-ranking", value=True, help="Re-rank results for accuracy")
-        
-        # Metadata filtering
-        with st.expander("🏷️ Advanced Filters"):
-            filter_by_type = st.multiselect("Document Type", ["pdf", "txt", "all"], default=["all"])
-            filter_by_date = st.date_input("Upload Date (from)", value=None)
-        
-        if st.button("Search", type="primary"):
-            if not query.strip():
-                st.warning("Please enter a question")
-            else:
-                with st.spinner("Searching your documents..."):
-                    metadata_filters = {}
-                    if filter_by_type and "all" not in filter_by_type:
-                        metadata_filters["document_type"] = {"value": filter_by_type[0], "operator": "equals"}
-                    
-                    response = query_documents(
-                        query,
-                        use_hybrid=use_hybrid,
-                        use_reranking=use_reranking,
-                        metadata_filters=metadata_filters if metadata_filters else None
-                    )
-                    
-                    if response and response.status_code == 200:
-                        data = response.json()
-                        st.session_state.session_id = data.get("session_id")
-                        
-                        # Display answer
-                        st.markdown(f"""
-                        <div class="answer-container">
-                            <div class="answer-text">{data['answer']}</div>
-                        </div>
-                        """, unsafe_allow_html=True)
-                        
-                        # Display retrieved chunks
-                        if data.get("top_chunks"):
-                            st.subheader("Retrieved Chunks")
-                            for chunk in data["top_chunks"]:
-                                with st.expander(f"📄 {chunk['metadata'].get('document_name', 'Document')}"):
-                                    st.markdown(f"""
-                                    <div>
-                                        <span class="badge badge-file">{chunk['metadata'].get('document_type', 'doc')}</span>
-                                        <span class="badge badge-info">Chunk {chunk['metadata'].get('chunk_index', 0)}</span>
-                                    </div>
-                                    """, unsafe_allow_html=True)
-                                    st.write(chunk['text'])
-                    else:
-                        error_msg = response.json().get("detail", "Query failed") if response else "Connection error"
-                        st.error(f"❌ Query failed: {error_msg}")
-    
-    with tab3:
-        st.header("Query History & Conversations")
-        
-        col1, col2 = st.columns([2, 1])
-        
-        with col1:
-            tab_history, tab_sessions = st.tabs(["Recent Queries", "Sessions"])
-            
-            with tab_history:
-                with st.spinner("Loading history..."):
-                    response = get_history()
-                    if response and response.status_code == 200:
-                        data = response.json()
-                        if data.get("history"):
-                            for item in data["history"][:20]:
-                                timestamp = item.get("timestamp", "")
-                                if timestamp:
-                                    dt = datetime.fromisoformat(timestamp)
-                                    time_str = dt.strftime("%Y-%m-%d %H:%M")
-                                else:
-                                    time_str = "Unknown"
-                                
-                                st.markdown(f"""
-                                <div class="history-card">
-                                    <div style="font-size: 12px; color: #888;">{time_str}</div>
-                                    <div class="history-query">Q: {item['query']}</div>
-                                    <div class="history-answer">A: {item['answer'][:300]}...</div>
-                                </div>
-                                """, unsafe_allow_html=True)
-                        else:
-                            st.info("No query history yet. Start by asking a question!")
-                    else:
-                        st.error("Failed to load history")
-            
-            with tab_sessions:
-                with st.spinner("Loading sessions..."):
-                    response = get_sessions()
-                    if response and response.status_code == 200:
-                        data = response.json()
-                        if data.get("sessions"):
-                            for session in data["sessions"]:
-                                st.write(f"**Session:** {session['session_id'][:8]}...")
-                                st.write(f"Messages: {session['messages']} | Last: {session['last_message'][:10]}")
-                        else:
-                            st.info("No conversation sessions yet.")
-                    else:
-                        st.error("Failed to load sessions")
-        
-        with col2:
-            if st.button("🗑️ Clear History"):
-                if st.button("Confirm Clear"):
-                    response = make_request("/history/clear", method="POST")
-                    if response and response.status_code == 200:
-                        st.success("History cleared")
-                        st.rerun()
-    
-    with tab4:
-        st.header("Settings")
-        
-        st.subheader("Search Configuration")
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.info("🔀 **Hybrid Search**: Combines BM25 keyword search with semantic vector search for better results")
-            st.info("📊 **Re-ranking**: Uses cross-encoders to re-rank results based on relevance")
-        
-        with col2:
-            st.info("🏷️ **Metadata Filtering**: Filter documents by type, upload date, and user")
-            st.info("💾 **Session Tracking**: Automatic conversation session management for multi-turn QA")
-        
-        st.subheader("Account Information")
-        if st.button("View Profile"):
-            response = make_request("/auth/me", method="GET")
-            if response and response.status_code == 200:
-                profile = response.json()
-                st.json(profile)
-
-
-# Main app logic
 def main():
-    if st.session_state.token and st.session_state.username:
-        render_main_app()
-    else:
+    if not st.session_state.username:
         render_auth_page()
+        return
+
+    render_sidebar()
+    load_documents()
+    render_workspace()
 
 
-if __name__ == "__main__":
-    main()
+main()
