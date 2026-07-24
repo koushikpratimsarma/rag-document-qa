@@ -3,13 +3,15 @@ Hybrid search module combining BM25 and vector search
 """
 from __future__ import annotations
 
-from typing import Any, Dict, List, Optional
+import logging
+from typing import Dict, List, Optional
 from rank_bm25 import BM25Okapi
 import numpy as np
 from langchain_core.documents import Document
 
 from backend.config import settings
-from backend.rag.metadata_filter import MetadataFilter
+
+logger = logging.getLogger(__name__)
 
 
 class HybridSearcher:
@@ -23,15 +25,19 @@ class HybridSearcher:
     
     def index_documents(self, documents: List[Document]) -> None:
         """Index documents for BM25 search"""
-        self.documents = documents
-        self.document_texts = [doc.page_content for doc in documents]
+        self.documents.extend(documents)
+        self.document_texts = [doc.page_content for doc in self.documents]
         
         # Tokenize documents for BM25
-        self.tokenized_docs = [doc.split() for doc in self.document_texts]
+        self.tokenized_docs = [doc.page_content.lower().split() for doc in self.documents]
         
-        # Initialize BM25
         if self.tokenized_docs:
             self.bm25 = BM25Okapi(self.tokenized_docs)
+            logger.info(
+                "BM25_INDEX_CREATED | total_document_count=%d | indexed_documents=%d",
+                len(self.documents),
+                len(documents),
+            )
     
     def bm25_search(self, query: str, top_k: int = 10) -> List[tuple[Document, float]]:
         """
@@ -41,10 +47,20 @@ class HybridSearcher:
             List of (document, score) tuples
         """
         if not self.bm25:
+            logger.info(
+                "BM25_SEARCH_SKIPPED | reason=no_index | query=%r",
+                query,
+            )
             return []
         
+        logger.info(
+            "BM25_SEARCH_STARTED | query=%r | top_k=%d",
+            query,
+            top_k,
+        )
+
         # Tokenize query
-        tokenized_query = query.split()
+        tokenized_query = query.lower().split()
         
         # Get BM25 scores
         scores = self.bm25.get_scores(tokenized_query)
@@ -56,7 +72,12 @@ class HybridSearcher:
         for idx in top_indices:
             if scores[idx] > 0:
                 results.append((self.documents[idx], float(scores[idx])))
-        
+
+        logger.info(
+            "BM25_SEARCH_COMPLETED | query=%r | result_count=%d",
+            query,
+            len(results),
+        )
         return results
     
     def vector_search(
@@ -82,10 +103,10 @@ class HybridSearcher:
     def hybrid_search(
         self,
         query: str,
-        query_embedding: List[float],
+        query_embedding: Optional[List[float]],
         vector_search_results: List[tuple[Document, float]],
         top_k: int = 10,
-        metadata_filter: Optional[MetadataFilter] = None
+        metadata_filter=None
     ) -> List[tuple[Document, float]]:
         """
         Combine BM25 and vector search results
@@ -103,19 +124,26 @@ class HybridSearcher:
         # Get results from both methods
         bm25_results = self.bm25_search(query, top_k=settings.reranking_top_k or top_k * 2)
         
-        # Normalize scores to 0-1 range
-        bm25_scores = {}
+        # Normalize BM25 scores to 0-1 range
+        bm25_scores: Dict[str, float] = {}
         if bm25_results:
             max_bm25_score = max(score for _, score in bm25_results)
             for doc, score in bm25_results:
                 doc_id = self._get_doc_id(doc)
                 bm25_scores[doc_id] = score / max_bm25_score if max_bm25_score > 0 else 0
         
-        vector_scores = {}
-        for doc, score in vector_search_results[:settings.reranking_top_k or top_k * 2]:
+        vector_results = vector_search_results[: settings.reranking_top_k or top_k * 2]
+        vector_scores: Dict[str, float] = {}
+        for doc, score in vector_results:
             doc_id = self._get_doc_id(doc)
-            vector_scores[doc_id] = score
-        
+            vector_scores[doc_id] = float(score)
+
+        # Normalize vector scores to 0-1 range
+        if vector_scores:
+            max_vector_score = max(vector_scores.values())
+            for doc_id, score in vector_scores.items():
+                vector_scores[doc_id] = score / max_vector_score if max_vector_score > 0 else 0
+
         # Combine scores
         combined_scores = {}
         all_doc_ids = set(bm25_scores.keys()) | set(vector_scores.keys())
@@ -130,12 +158,13 @@ class HybridSearcher:
                 settings.vector_weight * vector_score
             )
             combined_scores[doc_id] = combined
-        
+
         # Create result list with combined scores
-        result_docs = {self._get_doc_id(doc): doc for doc in self.documents}
-        for doc, _ in vector_search_results:
+        result_docs = {self._get_doc_id(doc): doc for doc, _ in vector_results}
+        for doc, _ in bm25_results:
             doc_id = self._get_doc_id(doc)
-            result_docs[doc_id] = doc
+            if doc_id not in result_docs:
+                result_docs[doc_id] = doc
         
         results = []
         for doc_id, score in combined_scores.items():
@@ -143,13 +172,22 @@ class HybridSearcher:
                 doc = result_docs[doc_id]
                 
                 # Apply metadata filter if provided
-                if metadata_filter and not metadata_filter.matches_document(doc.metadata):
-                    continue
+                # if metadata_filter and not metadata_filter.matches_document(doc.metadata):
+                #     continue
                 
                 results.append((doc, score))
         
         # Sort by combined score
         results.sort(key=lambda x: x[1], reverse=True)
+
+        logger.info(
+            "HYBRID_SEARCH_COMPLETED | query=%r | bm25_count=%d | vector_count=%d | combined_count=%d | top_k=%d",
+            query,
+            len(bm25_results),
+            len(vector_results),
+            len(results),
+            top_k,
+        )
         
         return results[:top_k]
     

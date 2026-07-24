@@ -11,6 +11,8 @@ except ImportError:
 
 from langchain_core.documents import Document
 from backend.config import settings
+import logging
+logger = logging.getLogger(__name__)
 
 
 class DocumentReranker:
@@ -33,7 +35,16 @@ class DocumentReranker:
             raise ImportError("sentence_transformers is required for document re-ranking")
         
         try:
+            logger.info(
+                "RERANKER_LOADING | model=%s",
+                self.model_name,
+            )
             self.model = CrossEncoder(self.model_name)
+
+            logger.info(
+                "RERANKER_READY | model=%s",
+                self.model_name,
+            )
         except Exception as e:
             raise RuntimeError(f"Failed to load re-ranker model {self.model_name}: {e}")
     
@@ -57,6 +68,13 @@ class DocumentReranker:
         if not documents or self.model is None:
             return [(doc, 1.0) for doc in documents][:top_k]
         
+
+        logger.info(
+            "RERANK_START | query=%r | candidate_chunks=%d",
+            query,
+            len(documents),
+        )
+        
         # Prepare pairs for cross-encoder
         pairs = [[query, doc.page_content] for doc in documents]
         
@@ -68,64 +86,25 @@ class DocumentReranker:
         
         # Sort by score descending
         results.sort(key=lambda x: x[1], reverse=True)
+
+        for rank, (doc, score) in enumerate(results, start=1):
+            logger.info(
+                "RERANK_RESULT | rank=%d | score=%.4f | chunk_index=%s | document=%s",
+                rank,
+                score,
+                doc.metadata.get("chunk_index"),
+                doc.metadata.get("document_name"),
+            )
+
+        logger.info(
+            "RERANK_FINISHED | returned=%d",
+            len(results),
+        )
         
         if top_k:
             results = results[:top_k]
         
         return results
-    
-    def rerank_with_metadata(
-        self,
-        query: str,
-        documents: List[Document],
-        top_k: Optional[int] = None,
-        boost_recent: bool = True
-    ) -> List[tuple[Document, float]]:
-        """
-        Re-rank documents with metadata boosting
-        
-        Args:
-            query: Query text
-            documents: List of documents to rerank
-            top_k: Return only top-k documents
-            boost_recent: Boost more recently uploaded documents
-        
-        Returns:
-            List of (document, score) tuples sorted by relevance
-        """
-        # Get base relevance scores
-        results = self.rerank(query, documents, top_k=None)
-        
-        # Apply metadata boosting if enabled
-        boosted_results = []
-        for doc, score in results:
-            boosted_score = score
-            
-            # Boost recent documents
-            if boost_recent and "upload_date" in doc.metadata:
-                from datetime import datetime, timedelta
-                try:
-                    upload_date = datetime.fromisoformat(doc.metadata["upload_date"])
-                    days_old = (datetime.utcnow() - upload_date).days
-                    
-                    # Boost factor: newer documents get higher scores
-                    if days_old < 1:
-                        boosted_score *= 1.2
-                    elif days_old < 7:
-                        boosted_score *= 1.1
-                    
-                except (ValueError, KeyError):
-                    pass
-            
-            boosted_results.append((doc, boosted_score))
-        
-        # Re-sort after boosting
-        boosted_results.sort(key=lambda x: x[1], reverse=True)
-        
-        if top_k:
-            boosted_results = boosted_results[:top_k]
-        
-        return boosted_results
 
 
 # Global reranker instance
